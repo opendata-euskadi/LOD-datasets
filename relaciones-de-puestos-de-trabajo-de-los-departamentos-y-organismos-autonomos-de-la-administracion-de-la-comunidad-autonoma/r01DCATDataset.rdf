@@ -1,0 +1,167 @@
+<rdf:RDF
+    xmlns:tema="http://datos.gob.es/kos/sector-publico/sector/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <dcat:Dataset rdf:about="http://opendata.euskadi.eus/datos/-/relaciones-de-puestos-de-trabajo-de-los-departamentos-y-organismos-autonomos-de-la-administracion-de-la-comunidad-autonoma/">
+    <dct:spatial rdf:resource="http://datos.gob.es/recurso/sector-publico/territorio/autonomia/pais-vasco"/>
+    <dc:language>es</dc:language>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="http://opendata.euskadi.eus/contenidos/ds_rrhh/relacion_puestos_trabajo/es_rpt/adjuntos/laborales.xlsx">
+        <dct:format>
+          <dct:IMT>
+            <rdfs:label>XLSX</rdfs:label>
+            <rdf:value>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</rdf:value>
+          </dct:IMT>
+        </dct:format>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >71414</dcat:byteSize>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://opendata.euskadi.eus/contenidos/ds_rrhh/relacion_puestos_trabajo/es_rpt/adjuntos/laborales.xlsx</dcat:accessURL>
+        <dct:title xml:lang="es">Laborales</dct:title>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="http://opendata.euskadi.eus/contenidos/ds_rrhh/relacion_puestos_trabajo/es_rpt/adjuntos/laborales.csv">
+        <dct:format>
+          <dct:IMT>
+            <rdfs:label>CSV</rdfs:label>
+            <rdf:value>text/csv</rdf:value>
+          </dct:IMT>
+        </dct:format>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >171223</dcat:byteSize>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://opendata.euskadi.eus/contenidos/ds_rrhh/relacion_puestos_trabajo/es_rpt/adjuntos/laborales.csv</dcat:accessURL>
+        <dct:title xml:lang="es">Laborales</dct:title>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dct:identifier>http://opendata.euskadi.eus/datos/-/relaciones-de-puestos-de-trabajo-de-los-departamentos-y-organismos-autonomos-de-la-administracion-de-la-comunidad-autonoma/</dct:identifier>
+    <dct:description xml:lang="es">RelaciÃ³n de puestos de trabajo de funcionarios/as, personal laboral y eventuales al servicio de la AdministraciÃ³n GeneralÂ de la Comunidad AutÃ³noma de Euskadi. Por lo tanto, esta relaciÃ³n no incluye los puestos del personal al servicioÂ de la AdministraciÃ³n Educativa,Â Ertzaintza y AdministraciÃ³n de Justicia. El listado, que se encuentra en formato xls y csv, incluye la denominaciÃ³n de los puestos, su nivel de complemento de destino y complemento especÃ­fico (solo funcionarios/as), perfil lingÃ¼Ã­stico asignado al puesto y su fecha de preceptividad en caso de constar de una, departamento u Organismo AutÃ³nomo al que pertenece, centro orgÃ¡nico y lugar de trabajo.</dct:description>
+    <dcat:keyword xml:lang="es">personal</dcat:keyword>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="http://opendata.euskadi.eus/contenidos/ds_rrhh/relacion_puestos_trabajo/opendata/byKind_es.json">
+        <dct:format>
+          <dct:IMT>
+            <rdfs:label>JSON</rdfs:label>
+            <rdf:value>application/json</rdf:value>
+          </dct:IMT>
+        </dct:format>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >116613</dcat:byteSize>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://opendata.euskadi.eus/contenidos/ds_rrhh/relacion_puestos_trabajo/opendata/byKind_es.json</dcat:accessURL>
+        <dct:title xml:lang="es">DistribuciÃ³n por tipo de puesto</dct:title>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dct:references rdf:resource="http://opendata.euskadi.eus/w79-resformx/es?r01kQry=tC:euskadi;tF:opendata;tT:estadistica;m:OpendataEstadistic.IN.(0,1),documentName.LIKE.EstadÃÂ­stica%20de%20Personal,documentLanguage.EQ.es;p:Inter"/>
+    <dct:references rdf:resource="http://opendata.euskadi.eus/contenidos/ds_rrhh/relacion_puestos_trabajo/es_rpt/adjuntos/informacion_adicional.txt"/>
+    <dcat:keyword xml:lang="es">perfil lingÃ¼Ã­stico</dcat:keyword>
+    <dct:publisher rdf:resource="http://datos.gob.es/recurso/sector-publico/org/Organismo/A16003011"/>
+    <dcat:keyword xml:lang="es">rpt</dcat:keyword>
+    <dcat:keyword xml:lang="es">laborales</dcat:keyword>
+    <dct:references rdf:resource="http://www.euskadi.eus/web01-a2funpub/es/aa81aUIWar/workplaces/aa81aIndex.jsp?lang=es"/>
+    <dcat:keyword xml:lang="es">eventuales</dcat:keyword>
+    <dcat:theme rdf:resource="http://datos.gob.es/kos/sector-publico/sector/sector-publico"/>
+    <dcat:keyword xml:lang="es">puestos</dcat:keyword>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="http://opendata.euskadi.eus/contenidos/ds_rrhh/relacion_puestos_trabajo/es_rpt/adjuntos/funcionarios.xlsx">
+        <dct:format>
+          <dct:IMT>
+            <rdfs:label>XLSX</rdfs:label>
+            <rdf:value>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</rdf:value>
+          </dct:IMT>
+        </dct:format>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >426097</dcat:byteSize>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://opendata.euskadi.eus/contenidos/ds_rrhh/relacion_puestos_trabajo/es_rpt/adjuntos/funcionarios.xlsx</dcat:accessURL>
+        <dct:title xml:lang="es">Funcionarios</dct:title>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2017-03-09T00:00:00</dct:modified>
+    <dct:accrualPeriodicity>
+      <dct:Frequency>
+        <rdf:value>
+          <time:DurationDescription>
+            <time:days rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >1</time:days>
+            <rdfs:label>Diario</rdfs:label>
+          </time:DurationDescription>
+        </rdf:value>
+      </dct:Frequency>
+    </dct:accrualPeriodicity>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="http://opendata.euskadi.eus/contenidos/ds_rrhh/relacion_puestos_trabajo/es_rpt/adjuntos/funcionarios.csv">
+        <dct:format>
+          <dct:IMT>
+            <rdfs:label>CSV</rdfs:label>
+            <rdf:value>text/csv</rdf:value>
+          </dct:IMT>
+        </dct:format>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >1216348</dcat:byteSize>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://opendata.euskadi.eus/contenidos/ds_rrhh/relacion_puestos_trabajo/es_rpt/adjuntos/funcionarios.csv</dcat:accessURL>
+        <dct:title xml:lang="es">Funcionarios</dct:title>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="http://opendata.euskadi.eus/contenidos/ds_rrhh/relacion_puestos_trabajo/es_rpt/adjuntos/eventuales.csv">
+        <dct:format>
+          <dct:IMT>
+            <rdfs:label>CSV</rdfs:label>
+            <rdf:value>text/csv</rdf:value>
+          </dct:IMT>
+        </dct:format>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >16364</dcat:byteSize>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://opendata.euskadi.eus/contenidos/ds_rrhh/relacion_puestos_trabajo/es_rpt/adjuntos/eventuales.csv</dcat:accessURL>
+        <dct:title xml:lang="es">Eventuales</dct:title>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dct:title xml:lang="es">Relaci?n actual de Puestos de Trabajo (RPT) de los Departamentos y Organismos Aut?nomos de la Administraci?n de la Comunidad Aut?noma</dct:title>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2011-09-19T00:00:00</dct:issued>
+    <dcat:keyword xml:lang="es">relacion</dcat:keyword>
+    <dcat:keyword xml:lang="es">funcionarios</dcat:keyword>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="http://opendata.euskadi.eus/contenidos/ds_rrhh/relacion_puestos_trabajo/opendata/byBasqueLangProfile_es.json">
+        <dct:format>
+          <dct:IMT>
+            <rdfs:label>JSON</rdfs:label>
+            <rdf:value>application/json</rdf:value>
+          </dct:IMT>
+        </dct:format>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >83231</dcat:byteSize>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://opendata.euskadi.eus/contenidos/ds_rrhh/relacion_puestos_trabajo/opendata/byBasqueLangProfile_es.json</dcat:accessURL>
+        <dct:title xml:lang="es">DistribuciÃ³n por perfil lingÃ¼Ã­stico</dct:title>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="http://opendata.euskadi.eus/contenidos/ds_rrhh/relacion_puestos_trabajo/es_rpt/adjuntos/eventuales.xlsx">
+        <dct:format>
+          <dct:IMT>
+            <rdfs:label>XLSX</rdfs:label>
+            <rdf:value>application/vnd.openxmlformats-officedocument.spreadsheetml.sheet</rdf:value>
+          </dct:IMT>
+        </dct:format>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >11182</dcat:byteSize>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://opendata.euskadi.eus/contenidos/ds_rrhh/relacion_puestos_trabajo/es_rpt/adjuntos/eventuales.xlsx</dcat:accessURL>
+        <dct:title xml:lang="es">Eventuales</dct:title>
+      </dcat:Distribution>
+    </dcat:distribution>
+  </dcat:Dataset>
+</rdf:RDF>

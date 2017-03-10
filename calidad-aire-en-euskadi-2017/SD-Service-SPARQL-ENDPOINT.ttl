@@ -1,0 +1,29 @@
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<http://opendata.euskadi.eus/sparql/id/calidad-aire-en-euskadi-2017> a sd:Service;
+    sd:url <http://opendata.euskadi.eus/sparql>;
+    sd:defaultDatasetDescription [
+        a sd:Dataset;
+        dc:title "Open Data Euskadi";
+        dc:description "Todos los datos de Open Data Euskadi";
+        void:triples 1100000100; 
+        sd:defaultGraph [
+            a sd:Graph, void:Dataset;
+            dc:title "Open Data Euskadi";
+            dc:description "Grafo por defecto con todos los datos de Open Data Euskadi";
+            void:triples 100;
+        ];
+        sd:namedGraph [
+            sd:name <http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017/>;
+            sd:graph [
+                a sd:Graph, void:Dataset;
+                dc:title "Grafo con datos de Calidad del aire 2017";
+                foaf:homepage <http://opendata.euskadi.eus/catalogo/-/calidad-aire-en-euskadi-2017/>;
+                void:triples 1000000000; 
+            ];
+        ];
+    ];
+    .

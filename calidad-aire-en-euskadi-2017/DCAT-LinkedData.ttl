@@ -1,0 +1,82 @@
+
+# Ejemplo de como quedaria un DCAT si los datos de esa ficha han sido convertidos a Linked Data 
+
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns0: <http://www.w3.org/2006/time#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+
+# Dataset principal en la web
+<http://opendata.euskadi.eus/catalogo/id/calidad-aire-en-euskadi-2017/>
+  
+# Distribucion en turtle, rdfxml, etc se hacer como siempre, solo que el archivo viene del conector
+dcat:distribution <http://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios.ttl>, <http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017/> .
+  
+# Distribucion Linked Data (SPARQL endpoint y LD server) es un void:Dataset, ademas de dcat:Distribution, como los demas
+<http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017/> a dcat:Distribution, void:Dataset ;
+void:feature <http://www.w3.org/ns/formats/RDF_XML> ;
+void:feature <http://www.w3.org/ns/formats/Turtle> ;
+# En realidad esto deberia ser la URL del SPARQL endpoint, pero como hago para definir los named graphs?
+void:sparqlEndpoint <http://opendata.euskadi.eus/sparql/id/calidad-aire-en-euskadi-2017> ; 
+void:dataDump <http://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios.ttl> ;
+# Dificil de detectar?
+void:rootResource <http://opendata.euskadi.eus/id/es/medio-ambiente/medicion/calidad-del-aire-2017-4-5> ; 
+# Cualquiera
+void:exampleResource <http://opendata.euskadi.eus/id/es/medio-ambiente/medicion/calidad-del-aire-2017-4-5> ; 
+# Hay que implementarlo
+void:uriLookupEndpoint <http://opendata.euskadi.eus/search?qt=term&q=> ; 
+void:uriSpace "http://opendata.euskadi.eus/id/es/medio-ambiente/" ; 
+# Estas reglas vienen del motor de URIs
+void:uriRegexPattern "^http://opendata.euskadi.eus\\.net/resource/*"; 
+# Estos se pueden obtener miranod los predicados rdf:type
+void:vocabulary <http://xmlns.com/foaf/0.1/>; 
+dc:modified "2008-11-17"^^xsd:date ;
+dc:title "Calidad del aire Linked Data"@es .
+
+# TODO: estadisticas?
+# TODO: derivedFrom con versionde conector?
+# TODO: linkset
+
+<http://opendata.euskadi.eus/sparql/id/calidad-aire-en-euskadi-2017> a sd:Service;
+    sd:url <http://opendata.euskadi.eus/sparql>;
+    sd:defaultDatasetDescription [
+        a sd:Dataset;
+        dc:title "Open Data Euskadi";
+        dc:description "Todos los datos de Open Data Euskadi";
+        void:triples 1100000100; 
+        sd:defaultGraph [
+            a sd:Graph, void:Dataset;
+            dc:title "Open Data Euskadi";
+            dc:description "Grafo por defecto con todos los datos de Open Data Euskadi";
+            void:triples 100;
+        ];
+        sd:namedGraph [
+            sd:name <http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017/>;
+            sd:graph [
+                a sd:Graph, void:Dataset;
+                dc:title "Grafo con datos de Calidad del aire 2017";
+                foaf:homepage <http://opendata.euskadi.eus/catalogo/-/calidad-aire-en-euskadi-2017/>;
+                void:triples 1000000000; 
+            ];
+        ];
+    ];
+    .
+
+<http://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios.ttl>
+  a dcat:Distribution ;
+  dc:format [
+    a dc:IMT ;
+    rdfs:label "RDF-Turtle" ;
+    rdf:value "text/turtle"
+  ] ;
+  dcat:byteSize 0.0 ;
+  dcat:accessURL "http://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios.ttl"^^xsd:anyURI ;
+  dc:title "Calidad del aire"@es .

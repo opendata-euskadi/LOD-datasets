@@ -5,39 +5,41 @@
 
 ## Descargar datos
 
-Descargar "Calidad del aire en Euskadi durante el 2017" en formato XLS (20.5 KB.) - Estaciones de medición
-[Descargar "Calidad del aire en Euskadi durante el 2017" en formato CSV (6.54 KB.) - Estaciones de medición](http://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios_csv.zip)
-Descargar "Calidad del aire en Euskadi durante el 2017" en formato XLS (1.65 MB.) - Horarios sin validar (últimos 45 días)
-Descargar "Calidad del aire en Euskadi durante el 2017" en formato CSV (467.39 KB.) - Horarios sin validar (últimos 45 días)
-Descargar "Calidad del aire en Euskadi durante el 2017" en formato XLS (166.48 KB.) - Diarios sin validar (últimos 45 días)
-Descargar "Calidad del aire en Euskadi durante el 2017" en formato CSV (40.56 KB.) - Diarios sin validar (últimos 45 días)
-Descargar "Calidad del aire en Euskadi durante el 2017" en formato XLS (5.21 MB.) - Datos validados - Diarios y horarios
-Descargar "Calidad del aire en Euskadi durante el 2017" en formato CSV (1.47 MB.) - Datos validados - Diarios y horarios
+* Descargar "Calidad del aire en Euskadi durante el 2017" en formato XLS (20.5 KB.) - Estaciones de medición
+* [Descargar "Calidad del aire en Euskadi durante el 2017" en formato CSV (6.54 KB.) - Estaciones de medición](http://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios_csv.zip)
+* Descargar "Calidad del aire en Euskadi durante el 2017" en formato XLS (1.65 MB.) - Horarios sin validar (últimos 45 días)
+* Descargar "Calidad del aire en Euskadi durante el 2017" en formato CSV (467.39 KB.) - Horarios sin validar (últimos 45 días)
+* Descargar "Calidad del aire en Euskadi durante el 2017" en formato XLS (166.48 KB.) - Diarios sin validar (últimos 45 días)
+* Descargar "Calidad del aire en Euskadi durante el 2017" en formato CSV (40.56 KB.) - Diarios sin validar (últimos 45 días)
+* Descargar "Calidad del aire en Euskadi durante el 2017" en formato XLS (5.21 MB.) - Datos validados - Diarios y horarios
+* Descargar "Calidad del aire en Euskadi durante el 2017" en formato CSV (1.47 MB.) - Datos validados - Diarios y horarios
 
 ## Acceso directo a datos
 
-El root resource es el recurso raiz que se puede usar como punto de partida para explorar el dataset: 
-http://opendata.euskadi.eus/id/es/medio-ambiente/medicion/calidad-del-aire-2017-4-5 
+* El root resource es el recurso raiz que se puede usar como punto de partida para explorar el dataset: 
+[http://opendata.euskadi.eus/id/es/medio-ambiente/medicion/calidad-del-aire-2017-4-5](http://opendata.euskadi.eus/id/es/medio-ambiente/medicion/calidad-del-aire-2017-4-5) 
 
-Ejemplo de recurso: http://opendata.euskadi.eus/id/es/medio-ambiente/medicion/calidad-del-aire-2017-4-5> 
+* Ejemplo de recurso: [http://opendata.euskadi.eus/id/es/medio-ambiente/medicion/calidad-del-aire-2017-4-5](http://opendata.euskadi.eus/id/es/medio-ambiente/medicion/calidad-del-aire-2017-4-5) 
 
-URI lookup service es un buscador de URIs (): http://opendata.euskadi.eus/search?qt=term&q= 
+* Buscador de URIs: [http://opendata.euskadi.eus/search?qt=term&q=](http://opendata.euskadi.eus/search?qt=term&q=) 
 
-URIs usadas en el dataset:
-http://opendata.euskadi.eus/id/es/medio-ambiente/*
+* Buscador de texto: [http://opendata.euskadi.eus/search?qt=term&q=](http://opendata.euskadi.eus/search?qt=term&q=)
+
+* URIs usadas en el dataset: `http://opendata.euskadi.eus/id/es/medio-ambiente/*`
+
+* Grafo del dataset: `http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017/`
+
+* Grafo de enlaces: 
  
-Vocabularios usados
-[FOAF](http://xmlns.com/foaf/0.1/)
-[Data cube](http://purl.org/linked-data/cube#)
+* Vocabularios usados: [FOAF](http://xmlns.com/foaf/0.1/), [Data cube](http://purl.org/linked-data/cube#)
 
-SPARQL endpoint: http://opendata.euskadi.eus/sparql/
+* SPARQL endpoint: [http://opendata.euskadi.eus/sparql/](http://opendata.euskadi.eus/sparql/)
 
-Grafo en el SPARQL endpoint: http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017/
-
-Consultas ejemplo
+* Consultas SPARQL de ejemplo:
 
 ```
 SELECT *
+FROM <http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017/>
 WHERE {
 	?s ?p ?o
 }

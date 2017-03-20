@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dcat="http://www.w3.org/ns/dcat#"
+         xmlns:void="http://rdfs.org/ns/void#"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:sd="http://www.w3.org/ns/sparql-service-description#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:prov="http://www.w3.org/ns/prov#">
+
+  <rdf:Description rdf:about="http://opendata.euskadi.eus/catalogo/id/calidad-aire-en-euskadi-2017/">
+    <dcat:distribution rdf:resource="http://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios.ttl"/>
+    <dcat:distribution rdf:resource="http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017/"/>
+  </rdf:Description>
+
+  <dcat:Distribution rdf:about="http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017/">
+    <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+    <void:feature rdf:resource="http://www.w3.org/ns/formats/RDF_XML"/>
+    <void:feature rdf:resource="http://www.w3.org/ns/formats/Turtle"/>
+    <void:dataDump>
+      <dcat:Distribution rdf:about="http://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios.rdf">
+        <dc:format>
+          <dc:IMT>
+            <rdfs:label>RDF-XML</rdfs:label>
+            <rdf:value>text/rdf-xml</rdf:value>
+          </dc:IMT>
+        </dc:format>
+
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</dcat:byteSize>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios.rdf</dcat:accessURL>
+        <dc:title xml:lang="es">Calidad del aire</dc:title>
+      </dcat:Distribution>
+    </void:dataDump>
+
+    <void:dataDump rdf:resource="http://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios.ttl"/>
+    <void:sparqlEndpoint>
+      <sd:Service rdf:about="http://opendata.euskadi.eus/sparql/id/calidad-aire-en-euskadi-2017">
+        <sd:url rdf:resource="http://opendata.euskadi.eus/sparql"/>
+        <sd:defaultDatasetDescription>
+          <sd:Dataset>
+            <dc:title>Open Data Euskadi</dc:title>
+            <dc:description>Todos los datos de Open Data Euskadi</dc:description>
+            <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1100000100</void:triples>
+            <sd:defaultGraph>
+              <sd:Graph>
+                <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+                <dc:title>Open Data Euskadi</dc:title>
+                <dc:description>Grafo por defecto con todos los datos de Open Data Euskadi</dc:description>
+                <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</void:triples>
+              </sd:Graph>
+            </sd:defaultGraph>
+
+            <sd:namedGraph>
+              <rdf:Description>
+                <sd:name rdf:resource="http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017/"/>
+                <sd:graph>
+                  <sd:Graph>
+                    <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+                    <dc:title>Grafo con datos de Calidad del aire 2017</dc:title>
+                    <foaf:homepage rdf:resource="http://opendata.euskadi.eus/catalogo/-/calidad-aire-en-euskadi-2017/"/>
+                    <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000000000</void:triples>
+                  </sd:Graph>
+                </sd:graph>
+
+              </rdf:Description>
+            </sd:namedGraph>
+
+          </sd:Dataset>
+        </sd:defaultDatasetDescription>
+
+      </sd:Service>
+    </void:sparqlEndpoint>
+
+    <void:rootResource rdf:resource="http://opendata.euskadi.eus/id/es/medio-ambiente/medicion/calidad-del-aire-2017-4-5"/>
+    <void:exampleResource rdf:resource="http://opendata.euskadi.eus/id/es/medio-ambiente/medicion/calidad-del-aire-2017-4-5"/>
+    <void:uriLookupEndpoint rdf:resource="http://opendata.euskadi.eus/search?qt=term&amp;q="/>
+    <void:uriSpace>http://opendata.euskadi.eus/id/es/medio-ambiente/</void:uriSpace>
+    <void:uriRegexPattern>^http://opendata.euskadi.eus\\.net/resource/*</void:uriRegexPattern>
+    <void:vocabulary rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-11-17</dc:modified>
+    <dc:title xml:lang="es">Calidad del aire Linked Data</dc:title>
+    <prov:wasGeneratedBy>
+      <prov:Activity>
+        <prov:wasAssociatedWith rdf:resource="http://example.org/my-csv2rdf-application"/>
+        <prov:startedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-02-13T15:12:44</prov:startedAtTime>
+        <prov:endedAtTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-02-13T15:12:46</prov:endedAtTime>
+        <prov:qualifiedUsage>
+          <prov:Usage>
+            <prov:entity>
+              <dcat:Distribution rdf:about="http://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios_csv.zip">
+                <dc:format>
+                  <dc:IMT>
+                    <rdfs:label>CSV</rdfs:label>
+                    <rdf:value>text/csv</rdf:value>
+                  </dc:IMT>
+                </dc:format>
+
+                <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</dcat:byteSize>
+                <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios_csv.zip</dcat:accessURL>
+                <dc:title xml:lang="es">Calidad del aire</dc:title>
+              </dcat:Distribution>
+            </prov:entity>
+
+            <prov:hadRole rdf:resource="http://www.w3.org/ns/csvw#csvEncodedTabularData"/>
+          </prov:Usage>
+        </prov:qualifiedUsage>
+
+      </prov:Activity>
+    </prov:wasGeneratedBy>
+
+  </dcat:Distribution>
+
+  <dcat:Distribution rdf:about="http://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios.ttl">
+    <dc:format>
+      <dc:IMT>
+        <rdfs:label>RDF-Turtle</rdfs:label>
+        <rdf:value>text/turtle</rdf:value>
+      </dc:IMT>
+    </dc:format>
+
+    <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</dcat:byteSize>
+    <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios.ttl</dcat:accessURL>
+    <dc:title xml:lang="es">Calidad del aire</dc:title>
+  </dcat:Distribution>
+
+</rdf:RDF>

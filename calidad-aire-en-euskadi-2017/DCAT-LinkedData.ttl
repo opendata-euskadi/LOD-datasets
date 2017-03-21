@@ -22,16 +22,16 @@
 # Dataset
 
 # Dataset principal en la Web (URI dataset resuelve mediante negociacion de contenido, ver arquitectura de URIs)
-<http://opendata.euskadi.eus/catalogo/id/calidad-aire-en-euskadi-2017/>
+<http://opendata.euskadi.eus/catalogo/id/calidad-aire-en-euskadi-2017>
   
 # Distribucion en turtle, rdfxml, etc se hacer como siempre, solo que el archivo viene del conector
-dcat:distribution <http://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios.ttl>, <http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017/> .
+dcat:distribution <http://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios.ttl>, <http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017> .
   
 ######################################
 # Linked Data
 
 # La distribucion Linked Data (SPARQL endpoint y LD server) es un void:Dataset, ademas de dcat:Distribution, como los demas
-<http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017/> a dcat:Distribution, void:Dataset ;
+<http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017> a dcat:Distribution, void:Dataset ;
 
 # Formatos archivos Linked Data disponibles (apuntan a las mismas distribuciones que ya exsitian, y si no se crean)
 void:feature <http://www.w3.org/ns/formats/RDF_XML> ;
@@ -83,11 +83,11 @@ dc:title "Calidad del aire Linked Data"@es .
             void:triples 100;
         ];
         sd:namedGraph [
-            sd:name <http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017/>;
+            sd:name <http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017>;
             sd:graph [
                 a sd:Graph, void:Dataset;
                 dc:title "Grafo con datos de Calidad del aire 2017";
-                foaf:homepage <http://opendata.euskadi.eus/catalogo/-/calidad-aire-en-euskadi-2017/>;
+                foaf:homepage <http://opendata.euskadi.eus/catalogo/-/calidad-aire-en-euskadi-2017>;
                 void:triples 1000000000; 
             ];
         ];
@@ -99,7 +99,7 @@ dc:title "Calidad del aire Linked Data"@es .
 
 # http://w3c.github.io/csvw/csv2rdf/#provenance
 
-<http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017/> prov:wasGeneratedBy [
+<http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017> prov:wasGeneratedBy [
     a prov:Activity ;
 
     # URI aplicacion conector? URI OntoRefine?

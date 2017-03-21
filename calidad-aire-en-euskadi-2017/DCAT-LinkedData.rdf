@@ -8,12 +8,12 @@
          xmlns:foaf="http://xmlns.com/foaf/0.1/"
          xmlns:prov="http://www.w3.org/ns/prov#">
 
-  <rdf:Description rdf:about="http://opendata.euskadi.eus/catalogo/id/calidad-aire-en-euskadi-2017/">
+  <rdf:Description rdf:about="http://opendata.euskadi.eus/catalogo/id/calidad-aire-en-euskadi-2017">
     <dcat:distribution rdf:resource="http://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios.ttl"/>
-    <dcat:distribution rdf:resource="http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017/"/>
+    <dcat:distribution rdf:resource="http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017"/>
   </rdf:Description>
 
-  <dcat:Distribution rdf:about="http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017/">
+  <dcat:Distribution rdf:about="http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017">
     <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
     <void:feature rdf:resource="http://www.w3.org/ns/formats/RDF_XML"/>
     <void:feature rdf:resource="http://www.w3.org/ns/formats/Turtle"/>
@@ -52,12 +52,12 @@
 
             <sd:namedGraph>
               <rdf:Description>
-                <sd:name rdf:resource="http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017/"/>
+                <sd:name rdf:resource="http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017"/>
                 <sd:graph>
                   <sd:Graph>
                     <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
                     <dc:title>Grafo con datos de Calidad del aire 2017</dc:title>
-                    <foaf:homepage rdf:resource="http://opendata.euskadi.eus/catalogo/-/calidad-aire-en-euskadi-2017/"/>
+                    <foaf:homepage rdf:resource="http://opendata.euskadi.eus/catalogo/-/calidad-aire-en-euskadi-2017"/>
                     <void:triples rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000000000</void:triples>
                   </sd:Graph>
                 </sd:graph>

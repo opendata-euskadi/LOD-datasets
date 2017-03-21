@@ -1,0 +1,6 @@
+SELECT *
+WHERE{
+	GRAPH <http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017> {
+        ?s ?p ?o
+    }
+}

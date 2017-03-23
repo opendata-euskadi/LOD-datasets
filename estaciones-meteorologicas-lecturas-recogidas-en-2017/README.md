@@ -1,4 +1,3 @@
-* URL: http://opendata.euskadi.eus/catalogo/-/estaciones-meteorologicas-lecturas-recogidas-en-2017/
 * URL dataset Open Data euskadi: http://opendata.euskadi.eus/datos/-/estaciones-meteorologicas-lecturas-recogidas-en-2017
 * Archivo DCAT original (Para saber que datos estamos manejando): `r01DCATDataset.rdf`
 * Archivo DCAT con URI de dataset modificada para cumplir el esquema de URIs acordado: `DCAT.rdf`

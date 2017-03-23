@@ -1,0 +1,3 @@
+PREFIX empleado-sector-publico: <http://opendata.euskadi.eus/recurso/sector-publico/employee/>
+
+DESCRIBE empleado-sector-publico:urkullu-renteria-inigo

@@ -1,0 +1,24 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns0: <http://www.w3.org/2006/time#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+
+<http://opendata.euskadi.eus/catalogo/id/calidad-aire-en-euskadi-2017/>
+  a dcat:Dataset ;
+  dc:modified "2017-03-09T00:00:00"^^xsd:date ;
+  dcat:distribution <http://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios_csv.zip> .
+
+<http://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios_csv.zip>
+  a dcat:Distribution ;
+  dc:format [
+    a dc:IMT ;
+    rdfs:label "CSV" ;
+    rdf:value "text/csv"
+  ] ;
+  dcat:byteSize 62628.0 ;
+  dcat:accessURL "http://opendata.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios_csv.zip"^^xsd:anyURI ;
+  dc:title "Diarios sin validar (Ãºltimos 45 dÃ­as)"@es .
+

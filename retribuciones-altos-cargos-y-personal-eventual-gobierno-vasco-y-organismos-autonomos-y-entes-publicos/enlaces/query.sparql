@@ -1,0 +1,52 @@
+PREFIX empleado-sector-publico: <http://opendata.euskadi.eus/recurso/sector-publico/employee/>
+PREFIX departamento-sector-publico: <http://opendata.euskadi.eus/recurso/sector-publico/departamento/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX schema: <http://schema.org/>
+PREFIX rdvocab:<http://rdvocab.info/ElementsGr2/>
+INSERT DATA { 
+    graph<http://opendata.euskadi.eus/EnlacesExternos/>{
+    #Actualizaciones iñigo urkullu ---> DEP:LEHENDAKARITZA
+     empleado-sector-publico:urkullu-renteria-inigo rdf:type foaf:person.
+     empleado-sector-publico:urkullu-renteria-inigo owl:sameAs <http://eu.dbpedia.org/page/I%C3%B1igo_Urkullu>.
+     empleado-sector-publico:urkullu-renteria-inigo schema:worksFor departamento-sector-publico:lehendakaritza.
+	 
+     #Actualizaciones Jose Maria Urkijo ---> DEP:LEHENDAKARITZA
+     empleado-sector-publico:urquijo-azcarate-jose-maria rdf:type foaf:person.
+     empleado-sector-publico:urquijo-azcarate-jose-maria schema:worksFor departamento-sector-publico:lehendakaritza.
+        
+     #Actualizaciones Carlos Ormazabal ---> DEP:DESARROLLO ECONOMICO
+     empleado-sector-publico:ormazabal-urbizu-carlos rdf:type foaf:person. 
+     empleado-sector-publico:ormazabal-urbizu-carlos schema:worksFor departamento-sector-publico:desarrollo-economico-y-competitividad.
+        
+     #Actualizaciones Eduardo Aguinaco Lopez de Suso ---> DEP:DESARROLLO ECONOMICO
+     empleado-sector-publico:aguinaco-lopez-de-suso-eduardo rdf:type foaf:person. 
+     empleado-sector-publico:aguinaco-lopez-de-suso-eduardo schema:worksFor departamento-sector-publico:desarrollo-economico-y-competitividad.
+      
+     #Actualizaciones Joseba Aburtu  ---> DEP:DESARROLLO ECONOMICO
+     empleado-sector-publico:aburto-erdoiza-joseba-imanol rdf:type foaf:person. 
+     empleado-sector-publico:aburto-erdoiza-joseba-imanol schema:worksFor departamento-sector-publico:desarrollo-economico-y-competitividad.
+     
+     #Actualizaciones Joseba Aburtu  ---> DEP:DESARROLLO ECONOMICO
+     empleado-sector-publico:zarraonandia-zuloaga-javier rdf:type foaf:person. 
+     empleado-sector-publico:zarraonandia-zuloaga-javier schema:worksFor departamento-sector-publico:desarrollo-economico-y-competitividad.
+	 
+	 #Actualizaciones departamento lehendekaritza
+	 departamento-sector-publico:lehendakaritza rdf:type schema:GovernmentOrganization.
+     departamento-sector-publico:lehendakaritza schema:employee empleado-sector-publico:urquijo-azcarate-jose-maria.
+     departamento-sector-publico:lehendakaritza schema:employee empleado-sector-publico:urkullu-renteria-inigo.
+     
+     #Actualizaciones departamento desarrollo economico y competitividad
+	 departamento-sector-publico:desarrollo-economico-y-competitividad rdf:type schema:GovernmentOrganization.
+     departamento-sector-publico:desarrollo-economico-y-competitividad schema:employee empleado-sector-publico:ormazabal-urbizu-carlos.
+     departamento-sector-publico:desarrollo-economico-y-competitividad schema:employee empleado-sector-publico:aburto-erdoiza-joseba-imanol.
+     departamento-sector-publico:desarrollo-economico-y-competitividad schema:employee empleado-sector-publico:aguinaco-lopez-de-suso-eduardo.
+     departamento-sector-publico:desarrollo-economico-y-competitividad schema:employee empleado-sector-publico:zarraonandia-zuloaga-javier.
+	#departamento-sector-publico:desarrollo-economico-y-competitividad owl:sameAs <http://www.euskadi.eus/gobierno-vasco/-/informacion/departamento-de-desarrollo-economico-y-competitividad/>.
+	#departamento-sector-publico:desarrollo-economico-y-competitividad rdvocab:locationOfHeadquarters <http://opendata.euskadi.eus/recurso/sector-publico/departamento/desarrollo-economico-y-competitividad/sede/bilbao> .
+	#departamento-sector-publico:desarrollo-economico-y-competitividad rdvocab:locationOfHeadquarters <http://opendata.euskadi.eus/recurso/sector-publico/departamento/desarrollo-economico-y-competitividad/sede/san-sebastian> .
+	#departamento-sector-publico:desarrollo-economico-y-competitividad rdvocab:locationOfHeadquarters <http://opendata.euskadi.eus/recurso/sector-publico/departamento/desarrollo-economico-y-competitividad/sede/vitoria-gasteiz>.
+  
+    }
+}

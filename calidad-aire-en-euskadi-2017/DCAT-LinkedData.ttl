@@ -17,6 +17,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
 
 ######################################
 # Dataset
@@ -31,7 +32,7 @@ dcat:distribution <http://opendata.euskadi.eus/contenidos/ds_informes_estudios/c
 # Linked Data
 
 # La distribucion Linked Data (SPARQL endpoint y LD server) es un void:Dataset, ademas de dcat:Distribution, como los demas
-<http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017> a dcat:Distribution, void:Dataset ;
+<http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017> a dcat:Distribution, void:Dataset, schema:Distribution ;
 
 # Formatos archivos Linked Data disponibles (apuntan a las mismas distribuciones que ya exsitian, y si no se crean)
 void:feature <http://www.w3.org/ns/formats/RDF_XML> ;

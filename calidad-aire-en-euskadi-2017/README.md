@@ -26,5 +26,5 @@ Estas URIs son adaptaciones de las URIs del dataset a la arquitectura de URIs co
 * Clase interna de todas las mediciones del monoxido del carbono: `http://euskadi.eus/def/medio-ambiente/medicion/CO`.
 * Monoxido de carbono 2017-01-26: `http://es.euskadi.eus/id/medio-ambiente/calidad-del-aire/elemento/CO-2017-01-26`.
 * Propiedades de ontologías externas: `http://www.w3.org/2003/01/geo/wgs84_pos#location`, `http://purl.org/dc/terms/date`, `http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure`, `http://purl.org/linked-data/sdmx/2009/measure#obsValue`,rdf:type, rdfs:comment
-* Clases de ontologías externas: `http://purl.org/linked-data/cube#Observation`, `http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3`,
+* Clases de ontologías externas: `http://purl.org/linked-data/cube#Observation`, `http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3`.
 * Datatypes: `http://www.w3.org/2001/XMLSchema#long`, `http://www.w3.org/2001/XMLSchema#date`, `http://www.w3.org/2001/XMLSchema#double`.

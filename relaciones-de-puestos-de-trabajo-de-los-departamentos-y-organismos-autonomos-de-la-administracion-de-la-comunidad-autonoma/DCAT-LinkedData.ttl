@@ -22,14 +22,14 @@
 # Dataset
 
 # Dataset principal en la Web (URI dataset resuelve mediante negociacion de contenido, ver arquitectura de URIs)
-<http://opendata.euskadi.eus/catalogo/id/relaciones-de-puestos-de-trabajo-de-los-departamentos-y-organismos-autonomos-de-la-administracion-de-la-comunidad-autonoma>
+<http://es.euskadi.eus/catalogo/id/relaciones-de-puestos-de-trabajo-de-los-departamentos-y-organismos-autonomos-de-la-administracion-de-la-comunidad-autonoma>
   
 # Distribucion en turtle, rdfxml, etc se hacer como siempre, solo que el archivo viene del conector
-dcat:distribution <http://opendata.euskadi.eus/dataset/id/relaciones-de-puestos-de-trabajo-de-los-departamentos-y-organismos-autonomos-de-la-administracion-de-la-comunidad-autonoma> .
+dcat:distribution <http://es.euskadi.eus/dataset/id/relaciones-de-puestos-de-trabajo-de-los-departamentos-y-organismos-autonomos-de-la-administracion-de-la-comunidad-autonoma> .
   
 ######################################
 # Linked Data
 
 # La distribucion Linked Data (SPARQL endpoint y LD server) es un void:Dataset, ademas de dcat:Distribution, como los demas
-<http://opendata.euskadi.eus/dataset/id/relaciones-de-puestos-de-trabajo-de-los-departamentos-y-organismos-autonomos-de-la-administracion-de-la-comunidad-autonoma> a dcat:Distribution, void:Dataset .
+<http://es.euskadi.eus/dataset/id/relaciones-de-puestos-de-trabajo-de-los-departamentos-y-organismos-autonomos-de-la-administracion-de-la-comunidad-autonoma> a dcat:Distribution, void:Dataset .
 

@@ -3,7 +3,7 @@
 # DCAT Open Data Euskadi - Linked Data
 #
 #
-# Ejemplo de como quedaria un DCAT si los datos de esa ficha han sido convertidos a Linked Data 
+# Ejemplo de como quedaria un DCAT si los datos de esa ficha han sido convertidos a Linked Data
 #
 # URL ficha Open Data Euskadi (simulacion en GitHub):
 
@@ -23,16 +23,16 @@
 # Dataset
 
 # Dataset principal en la Web (URI dataset resuelve mediante negociacion de contenido, ver arquitectura de URIs)
-<http://es.euskadi.eus/catalogo/id/calidad-aire-en-euskadi-2017>
-  
+<http://es.euskadi.eus/dataset/calidad-aire-en-euskadi-2017>
+
 # Distribucion en turtle, rdfxml, etc se hacer como siempre, solo que el archivo viene del conector
-dcat:distribution <http://es.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios.ttl>, <http://es.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017> .
-  
+dcat:distribution <http://es.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios.ttl>, <http://es.euskadi.eus/distribution/calidad-aire-en-euskadi-2017> .
+
 ######################################
 # Linked Data
 
 # La distribucion Linked Data (SPARQL endpoint y LD server) es un void:Dataset, ademas de dcat:Distribution, como los demas
-<http://es.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017> a dcat:Distribution, void:Dataset, schema:Distribution ;
+<http://es.euskadi.eus/distribution/calidad-aire-en-euskadi-2017> a dcat:Distribution, void:Dataset, schema:Distribution ;
 
 # Formatos archivos Linked Data disponibles (apuntan a las mismas distribuciones que ya exsitian, y si no se crean)
 void:feature <http://www.w3.org/ns/formats/RDF_XML> ;
@@ -41,23 +41,23 @@ void:feature <http://www.w3.org/ns/formats/Turtle> ;
 void:dataDump <http://es.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios.ttl> ;
 
 # SPARQL endpoint. En realidad esto deberia ser la URL del SPARQL endpoint, pero para definir los named graphs hay que hacer una definicion mas compleja (ver mas abajo)
-void:sparqlEndpoint <http://es.euskadi.eus/sparql/id/calidad-aire-en-euskadi-2017> ; 
+void:sparqlEndpoint <http://es.euskadi.eus/sparql/calidad-aire-en-euskadi-2017> ;
 
 # El root resource es el recurso raiz que se puede usar como punto de partida para explorar el dataset. Se tiene que definir manualmente
-void:rootResource <http://es.euskadi.eus/id/es/medio-ambiente/medicion/calidad-del-aire-2017-4-5> ; 
+void:rootResource <http://es.euskadi.eus/id/es/medio-ambiente/medicion/calidad-del-aire-2017-4-5> ;
 
-# Example resource es cualquier recurso del dataset, se puede obtener automaticamente 
-void:exampleResource <http://es.euskadi.eus/id/es/medio-ambiente/medicion/calidad-del-aire-2017-4-5> ; 
+# Example resource es cualquier recurso del dataset, se puede obtener automaticamente
+void:exampleResource <http://es.euskadi.eus/id/es/medio-ambiente/medicion/calidad-del-aire-2017-4-5> ;
 
 # El URI lookup service es un buscador de URIs, muy util pero hay que implementarlo
-void:uriLookupEndpoint <http://es.euskadi.eus/search?qt=term&q=> ; 
+void:uriLookupEndpoint <http://es.euskadi.eus/search?qt=term&q=> ;
 
 # Estas reglas vienen del motor de URIs
-void:uriSpace "http://es.euskadi.eus/id/es/medio-ambiente/" ; 
-void:uriRegexPattern "^http://es.euskadi.eus\\.net/resource/*"; 
+void:uriSpace "http://es.euskadi.eus/id/es/medio-ambiente/" ;
+void:uriRegexPattern "^http://es.euskadi.eus\\.net/resource/*";
 
 # Los vocabularios se pueden obtener mirando los predicados rdf:type
-void:vocabulary <http://xmlns.com/foaf/0.1/>; 
+void:vocabulary <http://xmlns.com/foaf/0.1/>;
 
 # Fecha modificación
 dc:modified "2008-11-17"^^xsd:date ;
@@ -70,13 +70,13 @@ dc:title "Calidad del aire Linked Data"@es .
 ######################################
 # SPARQL endpoint
 
-<http://es.euskadi.eus/sparql/id/calidad-aire-en-euskadi-2017> a sd:Service;
+<http://es.euskadi.eus/sparql/calidad-aire-en-euskadi-2017> a sd:Service;
     sd:url <http://es.euskadi.eus/sparql>;
     sd:defaultDatasetDescription [
         a sd:Dataset;
         dc:title "Open Data Euskadi";
         dc:description "Todos los datos de Open Data Euskadi";
-        void:triples 1100000100; 
+        void:triples 1100000100;
         sd:defaultGraph [
             a sd:Graph, void:Dataset;
             dc:title "Open Data Euskadi";
@@ -84,23 +84,23 @@ dc:title "Calidad del aire Linked Data"@es .
             void:triples 100;
         ];
         sd:namedGraph [
-            sd:name <http://es.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017>;
+            sd:name <http://es.euskadi.eus/graph/calidad-aire-en-euskadi-2017>;
             sd:graph [
                 a sd:Graph, void:Dataset;
                 dc:title "Grafo con datos de Calidad del aire 2017";
                 foaf:homepage <http://es.euskadi.eus/catalogo/-/calidad-aire-en-euskadi-2017>;
-                void:triples 1000000000; 
+                void:triples 1000000000;
             ];
         ];
     ];
     .
 
 ######################################
-# Provenance de conversion del CSV 
+# Provenance de conversion del CSV
 
 # http://w3c.github.io/csvw/csv2rdf/#provenance
 
-<http://es.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017> prov:wasGeneratedBy [
+<http://es.euskadi.eus/graph/calidad-aire-en-euskadi-2017> prov:wasGeneratedBy [
     a prov:Activity ;
 
     # URI aplicacion conector? URI OntoRefine?
@@ -114,7 +114,7 @@ dc:title "Calidad del aire Linked Data"@es .
 ] .
 
 ######################################
-# Distribucion RDF/XML (igual que DCAT normal) 
+# Distribucion RDF/XML (igual que DCAT normal)
 
 <http://es.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios.rdf>
   a dcat:Distribution ;
@@ -129,7 +129,7 @@ dc:title "Calidad del aire Linked Data"@es .
 
 
 ######################################
-# Distribucion Turtle (igual que DCAT normal) 
+# Distribucion Turtle (igual que DCAT normal)
 
 <http://es.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios.ttl>
   a dcat:Distribution ;
@@ -144,7 +144,7 @@ dc:title "Calidad del aire Linked Data"@es .
 
 
 ######################################
-# Distribucion CSV (igual que DCAT normal) 
+# Distribucion CSV (igual que DCAT normal)
 
 <http://es.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios_csv.zip>
   a dcat:Distribution ;
@@ -156,6 +156,3 @@ dc:title "Calidad del aire Linked Data"@es .
   dcat:byteSize 0.0 ;
   dcat:accessURL "http://es.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios_csv.zip"^^xsd:anyURI ;
   dc:title "Calidad del aire"@es .
-
-
-

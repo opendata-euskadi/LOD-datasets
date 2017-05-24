@@ -8,7 +8,7 @@
     xmlns:time="http://www.w3.org/2006/time#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-  <dcat:Dataset rdf:about="http://es.euskadi.eus/catalogo/id/registro-de-contratos-del-sector-publico-de-euskadi">
+  <dcat:Dataset rdf:about="http://es.euskadi.eus/dataset/registro-de-contratos-del-sector-publico-de-euskadi">
     <dcat:distribution>
       <dcat:Distribution rdf:about="http://opendata.euskadi.eus/contenidos/ds_contrataciones/contratos_euskadi/es_contracc/adjuntos/contratos_euskadi_json.zip">
         <dct:format>

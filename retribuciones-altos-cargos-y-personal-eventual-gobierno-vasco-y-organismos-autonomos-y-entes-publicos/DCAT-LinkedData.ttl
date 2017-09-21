@@ -33,29 +33,6 @@ dcat:distribution <http://es.euskadi.eus/distribution/retribuciones-altos-cargos
 # La distribucion Linked Data (SPARQL endpoint y LD server) es un void:Dataset, ademas de dcat:Distribution, como los demas
 <http://es.euskadi.eus/distribution/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos> a dcat:Distribution, void:Dataset ;
 
-void:sparqlEndpoint <http://es.euskadi.eus/sparql/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos> .
+sd:namedGraph <http://es.euskadi.eus/graph/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos> ;
 
-<http://es.euskadi.eus/sparql/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos> a sd:Service;
-    sd:url <http://es.euskadi.eus/sparql>;
-    sd:defaultDatasetDescription [
-        a sd:Dataset;
-        dc:title "Open Data Euskadi";
-        dc:description "Todos los datos de Open Data Euskadi";
-        void:triples 1100000100;
-        sd:defaultGraph [
-            a sd:Graph, void:Dataset;
-            dc:title "Open Data Euskadi";
-            dc:description "Grafo por defecto con todos los datos de Open Data Euskadi";
-            void:triples 100;
-        ];
-        sd:namedGraph [
-            sd:name <http://es.euskadi.eus/graph/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos>;
-            sd:graph [
-                a sd:Graph, void:Dataset;
-                dc:title "Grafo con datos de Calidad del aire 2017";
-                foaf:homepage <http://es.euskadi.eus/>;
-                void:triples 1000000000;
-            ];
-        ];
-    ];
-    .
+void:sparqlEndpoint <http://es.euskadi.eus/sparql/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos> .

@@ -34,14 +34,17 @@ dcat:distribution <http://es.euskadi.eus/contenidos/ds_informes_estudios/calidad
 # La distribucion Linked Data (SPARQL endpoint y LD server) es un void:Dataset, ademas de dcat:Distribution, como los demas
 <http://es.euskadi.eus/distribution/calidad-aire-en-euskadi-2017> a dcat:Distribution, void:Dataset, schema:Distribution ;
 
+# El Named Graph que tiene los datos
+sd:namedGraph <http://es.euskadi.eus/graph/calidad-aire-en-euskadi-2017>;
+
 # Formatos archivos Linked Data disponibles (apuntan a las mismas distribuciones que ya exsitian, y si no se crean)
 void:feature <http://www.w3.org/ns/formats/RDF_XML> ;
 void:dataDump <http://es.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios.rdf> ;
 void:feature <http://www.w3.org/ns/formats/Turtle> ;
 void:dataDump <http://es.euskadi.eus/contenidos/ds_informes_estudios/calidad_aire_2017/es_def/adjuntos/datos_diarios.ttl> ;
 
-# SPARQL endpoint. En realidad esto deberia ser la URL del SPARQL endpoint, pero para definir los named graphs hay que hacer una definicion mas compleja (ver mas abajo)
-void:sparqlEndpoint <http://es.euskadi.eus/sparql/calidad-aire-en-euskadi-2017> ;
+# SPARQL endpoint
+void:sparqlEndpoint <http://euskadi.eus/sparql/> ;
 
 # El root resource es el recurso raiz que se puede usar como punto de partida para explorar el dataset. Se tiene que definir manualmente
 void:rootResource <http://es.euskadi.eus/id/es/medio-ambiente/medicion/calidad-del-aire-2017-4-5> ;
@@ -66,34 +69,6 @@ dc:modified "2008-11-17"^^xsd:date ;
 dc:title "Calidad del aire Linked Data"@es .
 
 # TODO: Linkset
-
-######################################
-# SPARQL endpoint
-
-<http://es.euskadi.eus/sparql/calidad-aire-en-euskadi-2017> a sd:Service;
-    sd:url <http://es.euskadi.eus/sparql>;
-    sd:defaultDatasetDescription [
-        a sd:Dataset;
-        dc:title "Open Data Euskadi";
-        dc:description "Todos los datos de Open Data Euskadi";
-        void:triples 1100000100;
-        sd:defaultGraph [
-            a sd:Graph, void:Dataset;
-            dc:title "Open Data Euskadi";
-            dc:description "Grafo por defecto con todos los datos de Open Data Euskadi";
-            void:triples 100;
-        ];
-        sd:namedGraph [
-            sd:name <http://es.euskadi.eus/graph/calidad-aire-en-euskadi-2017>;
-            sd:graph [
-                a sd:Graph, void:Dataset;
-                dc:title "Grafo con datos de Calidad del aire 2017";
-                foaf:homepage <http://es.euskadi.eus/catalogo/-/calidad-aire-en-euskadi-2017>;
-                void:triples 1000000000;
-            ];
-        ];
-    ];
-    .
 
 ######################################
 # Provenance de conversion del CSV

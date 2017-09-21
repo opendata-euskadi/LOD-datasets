@@ -33,29 +33,8 @@ dcat:distribution <http://es.euskadi.eus/distribution/relaciones-de-puestos-de-t
 # La distribucion Linked Data (SPARQL endpoint y LD server) es un void:Dataset, ademas de dcat:Distribution, como los demas
 <http://es.euskadi.eus/distribution/relaciones-de-puestos-de-trabajo-de-los-departamentos-y-organismos-autonomos-de-la-administracion-de-la-comunidad-autonoma> a dcat:Distribution, void:Dataset ;
 
+sd:namedGraph  <http://es.euskadi.eus/graph/relaciones-de-puestos-de-trabajo-de-los-departamentos-y-organismos-autonomos-de-la-administracion-de-la-comunidad-autonoma>;
+
 void:sparqlEndpoint <http://es.euskadi.eus/sparql/relaciones-de-puestos-de-trabajo-de-los-departamentos-y-organismos-autonomos-de-la-administracion-de-la-comunidad-autonoma> .
 
-<http://es.euskadi.eus/sparql/relaciones-de-puestos-de-trabajo-de-los-departamentos-y-organismos-autonomos-de-la-administracion-de-la-comunidad-autonoma> a sd:Service;
-    sd:url <http://es.euskadi.eus/sparql>;
-    sd:defaultDatasetDescription [
-        a sd:Dataset;
-        dc:title "Open Data Euskadi";
-        dc:description "Todos los datos de Open Data Euskadi";
-        void:triples 1100000100;
-        sd:defaultGraph [
-            a sd:Graph, void:Dataset;
-            dc:title "Open Data Euskadi";
-            dc:description "Grafo por defecto con todos los datos de Open Data Euskadi";
-            void:triples 100;
-        ];
-        sd:namedGraph [
-            sd:name <http://es.euskadi.eus/graph/relaciones-de-puestos-de-trabajo-de-los-departamentos-y-organismos-autonomos-de-la-administracion-de-la-comunidad-autonoma>;
-            sd:graph [
-                a sd:Graph, void:Dataset;
-                dc:title "Grafo con datos de Calidad del aire 2017";
-                foaf:homepage <http://es.euskadi.eus/>;
-                void:triples 1000000000;
-            ];
-        ];
-    ];
-    .
+

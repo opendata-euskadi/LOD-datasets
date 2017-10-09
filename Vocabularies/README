@@ -1,0 +1,10 @@
+# Ontologías
+
+* `Euskadipedia-web`: prototipo de ontología creada simplemente para testear Linked Data Server mediante [Linked Data Test Suite](https://github.com/opendata-euskadi/LinkedDataTestSuite). La version HTML se creo mediante la herramienta [LODE](https://github.com/essepuntato/LODE). Hay que evaluar el uso de [Widoco](https://github.com/dgarijo/Widoco).
+
+* `Euskadipedia`: prototipos de ontologías con contenido más real: URIs de clases externas e internas, URIs de recursos de referencia.
+
+# Software
+
+* Ejemplo de como leer ontologías OWL usando [OWL API](https://github.com/owlcs/owlapi), sobretodo en el caso de ontologías en archivos diferentes que comparten URIs de clase (algunas ontologías se mantendrán manualmente y otras automáticamente).
+

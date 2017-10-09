@@ -8,7 +8,7 @@
     xmlns:time="http://www.w3.org/2006/time#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-  <dcat:Dataset rdf:about="http://opendata.euskadi.eus/catalogo/id/calidad-aire-en-euskadi-2017/">
+  <dcat:Dataset rdf:about="http://es.euskadi.eus/dataset/calidad-aire-en-euskadi-2017">
     <dct:accrualPeriodicity>
       <dct:Frequency>
         <rdf:value>

@@ -8,7 +8,7 @@
     xmlns:time="http://www.w3.org/2006/time#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-  <dcat:Dataset rdf:about="http://opendata.euskadi.eus/catalogo/id/estaciones-meteorologicas-lecturas-recogidas-en-2017">
+  <dcat:Dataset rdf:about="http://es.euskadi.eus/dataset/estaciones-meteorologicas-lecturas-recogidas-en-2017">
     <dct:identifier>http://opendata.euskadi.eus/datos/-/estaciones-meteorologicas-lecturas-recogidas-en-2017</dct:identifier>
     <dcat:keyword xml:lang="es">estaciÃ³n meteorolÃ³gica</dcat:keyword>
     <dcat:distribution>

@@ -1,7 +1,7 @@
 
 #Contratos asociados al departamento de salud y que hayan empezado en el año 2014
 PREFIX contsem:<http://contsem.unizar.es/def/sector-publico/pproc#>
-PREFIX opendata-dpto:<http://opendata.euskadi.eus/recurso/sector-publico/departamento/>
+PREFIX opendata-dpto:<http://opendata.euskadi.eus/id/sector-publico/departamento/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 select distinct * where { 
     ?contrato contsem:managingDepartment opendata-dpto:salud.

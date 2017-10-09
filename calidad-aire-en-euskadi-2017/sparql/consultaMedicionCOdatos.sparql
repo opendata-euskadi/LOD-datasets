@@ -10,9 +10,11 @@ PREFIX medicion:<http://opendata.euskadi.eus/def/medio-ambiente/medicion/>
 
 SELECT ?lugarDondeSeRealizo ?fecha ?valor
 WHERE {
-    ?q calidadDelAire:medicion ?r.
-    ?q geo:location ?lugarDondeSeRealizo.
-    ?q dcterms:date ?fecha.
-    ?r rdf:type medicion:CO.
-    ?r measure:obsValue ?valor .
+	GRAPH <http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017>{
+	    ?q calidadDelAire:medicion ?r.
+	    ?q geo:location ?lugarDondeSeRealizo.
+	    ?q dcterms:date ?fecha.
+	    ?r rdf:type medicion:CO.
+	    ?r measure:obsValue ?valor .
+    }
 }

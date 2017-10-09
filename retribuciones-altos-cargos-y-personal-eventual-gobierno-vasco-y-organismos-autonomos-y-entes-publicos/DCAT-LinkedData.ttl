@@ -3,7 +3,7 @@
 # DCAT Open Data Euskadi - Linked Data
 #
 #
-# Ejemplo de como quedaria un DCAT si los datos de esa ficha han sido convertidos a Linked Data 
+# Ejemplo de como quedaria un DCAT si los datos de esa ficha han sido convertidos a Linked Data
 #
 # URL ficha Open Data Euskadi (simulacion en GitHub):
 
@@ -22,14 +22,17 @@
 # Dataset
 
 # Dataset principal en la Web (URI dataset resuelve mediante negociacion de contenido, ver arquitectura de URIs)
-<http://opendata.euskadi.eus/catalogo/id/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos>
-  
+<http://es.euskadi.eus/dataset/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos>
+
 # Distribucion en turtle, rdfxml, etc se hacer como siempre, solo que el archivo viene del conector
-dcat:distribution <http://opendata.euskadi.eus/dataset/id/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos> .
-  
+dcat:distribution <http://es.euskadi.eus/distribution/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos> .
+
 ######################################
 # Linked Data
 
 # La distribucion Linked Data (SPARQL endpoint y LD server) es un void:Dataset, ademas de dcat:Distribution, como los demas
-<http://opendata.euskadi.eus/dataset/id/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos> a dcat:Distribution, void:Dataset .
+<http://es.euskadi.eus/distribution/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos> a dcat:Distribution, void:Dataset ;
 
+sd:namedGraph <http://es.euskadi.eus/graph/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos> ;
+
+void:sparqlEndpoint <http://es.euskadi.eus/sparql/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos> .

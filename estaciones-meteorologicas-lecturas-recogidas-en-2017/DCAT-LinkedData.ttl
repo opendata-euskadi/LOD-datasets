@@ -3,7 +3,7 @@
 # DCAT Open Data Euskadi - Linked Data
 #
 #
-# Ejemplo de como quedaria un DCAT si los datos de esa ficha han sido convertidos a Linked Data 
+# Ejemplo de como quedaria un DCAT si los datos de esa ficha han sido convertidos a Linked Data
 #
 # URL ficha Open Data Euskadi (simulacion en GitHub):
 
@@ -22,14 +22,18 @@
 # Dataset
 
 # Dataset principal en la Web (URI dataset resuelve mediante negociacion de contenido, ver arquitectura de URIs)
-<http://opendata.euskadi.eus/catalogo/id/estaciones-meteorologicas-lecturas-recogidas-en-2017>
-  
+<http://es.euskadi.eus/dataset/estaciones-meteorologicas-lecturas-recogidas-en-2017>
+
 # Distribucion en turtle, rdfxml, etc se hacer como siempre, solo que el archivo viene del conector
-dcat:distribution <http://opendata.euskadi.eus/dataset/id/estaciones-meteorologicas-lecturas-recogidas-en-2017> .
-  
+dcat:distribution <http://es.euskadi.eus/distribution/estaciones-meteorologicas-lecturas-recogidas-en-2017> .
+
 ######################################
 # Linked Data
 
 # La distribucion Linked Data (SPARQL endpoint y LD server) es un void:Dataset, ademas de dcat:Distribution, como los demas
-<http://opendata.euskadi.eus/dataset/id/estaciones-meteorologicas-lecturas-recogidas-en-2017> a dcat:Distribution, void:Dataset .
+<http://es.euskadi.eus/distribution/estaciones-meteorologicas-lecturas-recogidas-en-2017> a dcat:Distribution, void:Dataset ;
+
+sd:namedGraph <http://es.euskadi.eus/graph/estaciones-meteorologicas-lecturas-recogidas-en-2017>;
+
+void:sparqlEndpoint <http://es.euskadi.eus/sparql/estaciones-meteorologicas-lecturas-recogidas-en-2017> .
 

@@ -1,0 +1,61 @@
+######################################
+#
+# DCAT Open Data Euskadi - Linked Data
+#
+#
+# Ejemplo de como quedaria un DCAT si los datos de esa ficha han sido convertidos a Linked Data
+#
+# URL ficha Open Data Euskadi (simulacion en GitHub):
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+######################################
+# Dataset
+
+# Dataset principal en la Web (URI dataset resuelve mediante negociacion de contenido, ver arquitectura de URIs)
+<http://es.euskadi.eus/dataset/estaciones-meteorologicas-lecturas-recogidas-en-2017>
+
+# Distribucion en turtle, rdfxml, etc se hacer como siempre, solo que el archivo viene del conector
+dcat:distribution <http://es.euskadi.eus/distribution/estaciones-meteorologicas-lecturas-recogidas-en-2017> .
+
+######################################
+# Linked Data
+
+# La distribucion Linked Data (SPARQL endpoint y LD server) es un void:Dataset, ademas de dcat:Distribution, como los demas
+<http://es.euskadi.eus/distribution/estaciones-meteorologicas-lecturas-recogidas-en-2017> a dcat:Distribution, void:Dataset ;
+
+void:sparqlEndpoint <http://es.euskadi.eus/sparql/estaciones-meteorologicas-lecturas-recogidas-en-2017> .
+
+<http://es.euskadi.eus/sparql/estaciones-meteorologicas-lecturas-recogidas-en-2017> a sd:Service;
+    sd:url <http://es.euskadi.eus/sparql>;
+    sd:defaultDatasetDescription [
+        a sd:Dataset;
+        dc:title "Open Data Euskadi";
+        dc:description "Todos los datos de Open Data Euskadi";
+        void:triples 1100000100;
+        sd:defaultGraph [
+            a sd:Graph, void:Dataset;
+            dc:title "Open Data Euskadi";
+            dc:description "Grafo por defecto con todos los datos de Open Data Euskadi";
+            void:triples 100;
+        ];
+        sd:namedGraph [
+            sd:name <http://es.euskadi.eus/graph/estaciones-meteorologicas-lecturas-recogidas-en-2017>;
+            sd:graph [
+                a sd:Graph, void:Dataset;
+                dc:title "Grafo con datos de Calidad del aire 2017";
+                foaf:homepage <http://es.euskadi.eus/>;
+                void:triples 1000000000;
+            ];
+        ];
+    ];
+    .

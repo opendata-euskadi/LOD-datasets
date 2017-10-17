@@ -21,9 +21,30 @@
     
 
 
-    <!-- http://dbpedia.org/resource/President -->
+    <!-- http://dbpedia.org/ontology/GovernmentalAdministrativeRegion -->
 
-    <owl:Class rdf:about="http://dbpedia.org/resource/President"/>
+    <owl:Class rdf:about="http://dbpedia.org/ontology/GovernmentalAdministrativeRegion"/>
+    
+
+
+    <!-- http://dbpedia.org/ontology/Person -->
+
+    <owl:Class rdf:about="http://dbpedia.org/ontology/Person"/>
+    
+
+
+    <!-- http://euskadi.eus/def/Euskadipedia#HistoricTerritory -->
+
+    <owl:Class rdf:about="http://euskadi.eus/def/Euskadipedia#HistoricTerritory">
+        <rdfs:subClassOf rdf:resource="http://dbpedia.org/ontology/GovernmentalAdministrativeRegion"/>
+        <rdfs:comment xml:lang="es">A primera vista, no hay ninguna clase en ninguna ontologia para Diputacion, de modo que creamos una y la relacionamos con la dbpedia mediante subclassof</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Person -->
+
+    <owl:Class rdf:about="http://schema.org/Person"/>
     
 
 
@@ -38,10 +59,60 @@
     
 
 
-    <!-- http://es.euskadi.eus/public-sector/government/inigo-urkullu-renteria -->
+    <!-- http://es.euskadi.eus/public-sector/government/HistoricTerritory/Alava -->
 
-    <owl:NamedIndividual rdf:about="http://es.euskadi.eus/public-sector/government/inigo-urkullu-renteria">
-        <rdf:type rdf:resource="http://dbpedia.org/resource/President"/>
+    <owl:NamedIndividual rdf:about="http://es.euskadi.eus/public-sector/government/HistoricTerritory/Alava">
+        <rdf:type rdf:resource="http://euskadi.eus/def/Euskadipedia#HistoricTerritory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://es.euskadi.eus/public-sector/government/HistoricTerritory/Guipuzcoa -->
+
+    <owl:NamedIndividual rdf:about="http://es.euskadi.eus/public-sector/government/HistoricTerritory/Guipuzcoa">
+        <rdf:type rdf:resource="http://euskadi.eus/def/Euskadipedia#HistoricTerritory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://es.euskadi.eus/public-sector/government/HistoricTerritory/Vizcaya -->
+
+    <owl:NamedIndividual rdf:about="http://es.euskadi.eus/public-sector/government/HistoricTerritory/Vizcaya">
+        <rdf:type rdf:resource="http://euskadi.eus/def/Euskadipedia#HistoricTerritory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://es.euskadi.eus/public-sector/government/Person/inigo-urkullu-renteria -->
+
+    <owl:NamedIndividual rdf:about="http://es.euskadi.eus/public-sector/government/Person/inigo-urkullu-renteria">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
+        <rdf:type rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment xml:lang="es">URI referencia (&quot;oficial&quot;) de Iñigo Urkullu, para el motor de URIs. Es una instancia de una clase de DBPedia, Person, que tambien va en la URI. Tambien se podria usar schema:Person</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eus.euskadi.eus/public-sector/government/HistoricTerritory/Araba -->
+
+    <owl:NamedIndividual rdf:about="http://eus.euskadi.eus/public-sector/government/HistoricTerritory/Araba">
+        <rdf:type rdf:resource="http://euskadi.eus/def/Euskadipedia#HistoricTerritory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eus.euskadi.eus/public-sector/government/HistoricTerritory/Bizkaia -->
+
+    <owl:NamedIndividual rdf:about="http://eus.euskadi.eus/public-sector/government/HistoricTerritory/Bizkaia">
+        <rdf:type rdf:resource="http://euskadi.eus/def/Euskadipedia#HistoricTerritory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eus.euskadi.eus/public-sector/government/HistoricTerritory/Gipuzkoa -->
+
+    <owl:NamedIndividual rdf:about="http://eus.euskadi.eus/public-sector/government/HistoricTerritory/Gipuzkoa">
+        <rdf:type rdf:resource="http://euskadi.eus/def/Euskadipedia#HistoricTerritory"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

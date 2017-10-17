@@ -29,6 +29,7 @@ public class OWLReader {
 		OWLOntology ontology = manager.loadOntologyFromOntologyDocument(new File("../Euskadipedia/ref.owl"));
 		Set<OWLNamedIndividual> individuals = ontology.getIndividualsInSignature();
 		Iterator<OWLNamedIndividual> individualsIterator = individuals.iterator();
+		System.out.println("Individuos de " + ontology.getOntologyID().getOntologyIRI());
 		while(individualsIterator.hasNext()){
 			System.out.println(individualsIterator.next().getIRI());
 		}

@@ -83,12 +83,20 @@
     
 
 
-    <!-- http://es.euskadi.eus/public-sector/government/Person/inigo-urkullu-renteria -->
+    <!-- http://es.euskadi.eus/public-sector/government/Person/inigo-urqullu-renteria -->
 
-    <owl:NamedIndividual rdf:about="http://es.euskadi.eus/public-sector/government/Person/inigo-urkullu-renteria">
+    <owl:NamedIndividual rdf:about="http://es.euskadi.eus/public-sector/government/Person/inigo-urqullu-renteria">
         <rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
         <rdf:type rdf:resource="http://schema.org/Person"/>
-        <rdfs:comment xml:lang="es">URI referencia (&quot;oficial&quot;) de Iñigo Urkullu, para el motor de URIs. Es una instancia de una clase de DBPedia, Person, que tambien va en la URI. Tambien se podria usar schema:Person</rdfs:comment>
+        <owl:sameAs rdf:resource="http://eus.euskadi.eus/public-sector/government/Person/inigo-urkullu-renteria"/>
+        <rdfs:comment xml:lang="es">URI referencia (&quot;oficial&quot;) de Iñigo Urkullu, para el motor de URIs. Es una instancia de una clase de DBPedia, Person, que tambien va en la URI. Tambien se podria usar schema:Person
+
+Los rdfs:label se usan para codificar diferentes formas en las que puede aparecer esta entidad</rdfs:comment>
+        <rdfs:label>Iñigo U.R.</rdfs:label>
+        <rdfs:label>Iñigo Urkullu</rdfs:label>
+        <rdfs:label>Iñigo Urkullu Renteria</rdfs:label>
+        <rdfs:label>Renteria Urkullu, Iñigo</rdfs:label>
+        <rdfs:label xml:lang="es">Urkullu, Iñigo</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -113,6 +121,14 @@
 
     <owl:NamedIndividual rdf:about="http://eus.euskadi.eus/public-sector/government/HistoricTerritory/Gipuzkoa">
         <rdf:type rdf:resource="http://euskadi.eus/def/Euskadipedia#HistoricTerritory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eus.euskadi.eus/public-sector/government/Person/inigo-urkullu-renteria -->
+
+    <owl:NamedIndividual rdf:about="http://eus.euskadi.eus/public-sector/government/Person/inigo-urkullu-renteria">
+        <rdf:type rdf:resource="http://dbpedia.org/ontology/Person"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 

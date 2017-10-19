@@ -23,7 +23,10 @@
 
     <!-- http://euskadi.eus/def/Staff#Police -->
 
-    <owl:Class rdf:about="http://euskadi.eus/def/Staff#Police"/>
+    <owl:Class rdf:about="http://euskadi.eus/def/Staff#Police">
+        <rdfs:label xml:lang="es">Policía</rdfs:label>
+        <rdfs:label xml:lang="eu">Polizia</rdfs:label>
+    </owl:Class>
     
 
 

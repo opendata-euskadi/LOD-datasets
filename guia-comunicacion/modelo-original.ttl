@@ -1,0 +1,18 @@
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> . 
+<http://gida.irekia.euskadi.eus/es/people/10484> a vcard:Individual;
+	vcard:formattedName "Esperanza Iñurrieta" ; 
+	vcard:address [
+		vcard:streetAddress "Sarriena, s/n" ;
+		vcard:postalCode "48940" ;
+		vcard:locality "Leioa, Bizkaia" ;
+		vcard:country "España" ;
+		] ;
+	vcard:telephone <tel:946012231>;
+	vcard:tel <tel:946013311> ;
+	vcard:email <mailto:esperanza.inurrieta@ehu.es> ;
+	vcard:url <http://www.biblioteka.ehu.es> ;
+	vcard:title "Directora" ;
+	vcard:org "Biblioteca Universitaria. Universidad del País Vasco" ;.
+	<tel:946012231> a vcard:Tel, 
+	vcard:Pref;rdf:value "946012231" ;.<tel:946013311> a vcard:Fax;rdf:value "946013311" ;.<mailto:esperanza.inurrieta@ehu.es>a vcard:Email .

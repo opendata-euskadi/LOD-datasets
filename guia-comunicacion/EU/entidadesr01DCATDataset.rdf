@@ -1,0 +1,113 @@
+<rdf:RDF
+    xmlns:tema="http://datos.gob.es/kos/sector-publico/sector/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:time="http://www.w3.org/2006/time#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <dcat:Dataset rdf:about="http://opendata.euskadi.eus/datos/-/eusko-jaurlaritzaren-komunikazio-gida-euskadiko-erakundeen-kontaktu-datuak/">
+    <dct:title xml:lang="eu">Eusko Jaurlaritzaren Komunikazio Gida: Euskadiko Erakundeen kontaktu datuak</dct:title>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="http://gida.irekia.euskadi.eus/open_data/gc_entidades_datos_completos.csv">
+        <dct:format>
+          <dct:IMT>
+            <rdfs:label>CSV</rdfs:label>
+            <rdf:value>text/csv</rdf:value>
+          </dct:IMT>
+        </dct:format>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >307200</dcat:byteSize>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://gida.irekia.euskadi.eus/open_data/gc_entidades_datos_completos.csv</dcat:accessURL>
+        <dct:title xml:lang="eu">Kontaktu-datuak</dct:title>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+    <dcat:theme rdf:resource="http://datos.gob.es/kos/sector-publico/sector/sector-publico"/>
+    <dcat:keyword xml:lang="eu">alderdi politikoak</dcat:keyword>
+    <dcat:keyword xml:lang="eu">publikoak</dcat:keyword>
+    <dc:language>eu</dc:language>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2016-09-16T00:00:00</dct:modified>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="http://gida.irekia.euskadi.eus/eu/sparql">
+        <dct:format>
+          <dct:IMT>
+            <rdfs:label>SPARQL-XML</rdfs:label>
+            <rdf:value>application/sparql-results+xml</rdf:value>
+          </dct:IMT>
+        </dct:format>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >0</dcat:byteSize>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://gida.irekia.euskadi.eus/eu/sparql</dcat:accessURL>
+        <dct:title xml:lang="eu">Kontaktu-datuak</dct:title>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dcat:keyword xml:lang="eu">garraioak</dcat:keyword>
+    <dcat:keyword xml:lang="eu">kontaktua</dcat:keyword>
+    <dcat:keyword xml:lang="eu">kultura</dcat:keyword>
+    <dcat:keyword xml:lang="eu">elkarte profesionalak</dcat:keyword>
+    <dct:accrualPeriodicity>
+      <dct:Frequency>
+        <rdf:value>
+          <time:DurationDescription>
+            <time:months rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+            >1</time:months>
+            <rdfs:label>Mensual</rdfs:label>
+          </time:DurationDescription>
+        </rdf:value>
+      </dct:Frequency>
+    </dct:accrualPeriodicity>
+    <dct:description xml:lang="eu">Komunikazio Irekiko Gida herritarren zerbitzura dagoen tresna da, Euskal Autonomia Erkidegoko erakunde, pertsona eta kargudunekin harremanetan jarri ahal izateko datu publikoak eskuratzea eta argitaratzea ahalbidetzen duena, eta Eusko Jaurlaritzako Lehendakaritzaren Komunikaziorako Idazkaritza Nagusiak sortu duena.Datu-sorta honek komunikazio gidan argitaratutako Euskadiko Erakundeen kontaktu datuak dauzka: administrazio eta erakunde publikoak; alderdi politikoak; konsulatuak; elkarte profesionalak; ikerketa zentroak; ekonomia eta lan munduaren inguruko erakundeak;Â hezkuntza, kultura, garraioak, komunikazioa eta euskararekin erlazioa dutenak, etb.</dct:description>
+    <dcat:keyword xml:lang="eu">konsulatuak</dcat:keyword>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="http://gida.irekia.euskadi.eus/open_data/gc_entidades_datos_completos.ttl">
+        <dct:format>
+          <dct:IMT>
+            <rdfs:label>RDF-Turtle</rdfs:label>
+            <rdf:value>text/turtle</rdf:value>
+          </dct:IMT>
+        </dct:format>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >0</dcat:byteSize>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://gida.irekia.euskadi.eus/open_data/gc_entidades_datos_completos.ttl</dcat:accessURL>
+        <dct:title xml:lang="eu">Kontaktu-datuak</dct:title>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dct:identifier>http://opendata.euskadi.eus/datos/-/eusko-jaurlaritzaren-komunikazio-gida-euskadiko-erakundeen-kontaktu-datuak/</dct:identifier>
+    <dcat:keyword xml:lang="eu">ikerketa</dcat:keyword>
+    <dcat:keyword xml:lang="eu">administrazioak</dcat:keyword>
+    <dct:publisher rdf:resource="http://datos.gob.es/recurso/sector-publico/org/Organismo/A16003011"/>
+    <dcat:keyword xml:lang="eu">enpresak</dcat:keyword>
+    <dcat:keyword xml:lang="eu">erakundeak</dcat:keyword>
+    <dct:references rdf:resource="http://opendata.euskadi.eus/w79-resformx/eu?r01kQry=i:r01mtpd14bb619814a1b5bc30dfa03c538be6a5961;tC:euskadi;tF:opendata;tT:ds_localizaciones;m:fullText.LIKE.gida,documentLanguage.EQ.eu;p:Inter;"/>
+    <dcat:distribution>
+      <dcat:Distribution rdf:about="http://gida.irekia.euskadi.eus/open_data/gc_entidades_datos_completos.vcf">
+        <dct:format>
+          <dct:IMT>
+            <rdfs:label>vCard-texto</rdfs:label>
+            <rdf:value>text/vcard</rdf:value>
+          </dct:IMT>
+        </dct:format>
+        <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal"
+        >0</dcat:byteSize>
+        <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI"
+        >http://gida.irekia.euskadi.eus/open_data/gc_entidades_datos_completos.vcf</dcat:accessURL>
+        <dct:title xml:lang="eu">Kontaktu-datuak</dct:title>
+      </dcat:Distribution>
+    </dcat:distribution>
+    <dct:references rdf:resource="http://gida.irekia.euskadi.eus/eu"/>
+    <dct:spatial rdf:resource="http://datos.gob.es/recurso/sector-publico/territorio/autonomia/pais-vasco"/>
+    <dcat:keyword xml:lang="eu">euskara</dcat:keyword>
+    <dcat:keyword xml:lang="eu">komunikazio-gida</dcat:keyword>
+    <dcat:keyword xml:lang="eu">hezkuntza</dcat:keyword>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2012-07-13T00:00:00</dct:issued>
+    <dcat:keyword xml:lang="eu">komunikazioa</dcat:keyword>
+  </dcat:Dataset>
+</rdf:RDF>

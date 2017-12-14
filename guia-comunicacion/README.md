@@ -1,6 +1,7 @@
-# Intro
+Intro
+=====
 
-# Datos
+## Datos
 
 http://opendata.euskadi.eus/catalogo/-/guia-comunicacion-gobierno-vasco-datos-contacto-entidades-euskadi/
 
@@ -12,13 +13,20 @@ http://opendata.euskadi.eus/katalogoa/-/eusko-jaurlaritzaren-komunikazio-gida-er
 
 (DCATs obtenidos inspeccionado código fuente de la página web)
 
-# Problemas en los CSV
+## Problemas en los CSV
 
 Mirar codigo
 Mirar LOG
 
-# Problemas/decisiones generales Linked Data
+Los datos de cargos y de entidades no comparten nada en comun, con lo que no se pueden crear URIs de entidades para enlazarlos:
 
-* Un unico grafo con dos propiedades lanpostua/cargo. Ventaja: un solo conversor Java. Desventaja: el dataset EU no se convierte.
+cargos: "Delegado de Álava, Kristau Eskola"
+entidad: "Kristau eskola"
+
+## Problemas/decisiones generales Linked Data
+
+Asumiendo que las URIs generadas para cargos son constantes.
+
+* Un unico grafo con dos idiomas lanpostua/cargo en vcard:role. Ventaja: un solo conversor Java. Desventaja: el dataset EU no se convierte.
 * Dos grafos identicos con solo diferencia en Lanpostua/Cargo. Ventaja: dos conversores Java muy parecidos. Desventaja: muchos triples se duplican: en el caso de recursos da igual, en el caso de literales no (si se hace una consulta al default graph, los rdfs:comment duplicados saldrán dos veces).
-* El grafo ES contiene todo menos Lanpostu, y el grafo EU solo contiene Lanpostu. Ventaja: menos triples. Desventaja: dos conversores Java.
+* El grafo ES contiene todo menos Lanpostu, y el grafo EU solo contiene Lanpostu. Ventaja: menos triples. Desventaja: dos conversores Java, uno solo con las lo correspondiente a Lanpostu.

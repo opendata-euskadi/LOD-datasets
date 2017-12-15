@@ -1,3 +1,5 @@
+######### !!!!!!!!!!! URIs INCORRECTAS !!!!!!!!!!!!!! #################
+
 PREFIX empleado-sector-publico: <http://opendata.euskadi.eus/recurso/sector-publico/employee/>
 PREFIX departamento-sector-publico: <http://opendata.euskadi.eus/recurso/sector-publico/departamento/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>

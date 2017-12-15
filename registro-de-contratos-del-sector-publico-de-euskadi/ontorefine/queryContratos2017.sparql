@@ -5,7 +5,7 @@ PREFIX dcterms:<http://purl.org/dc/terms/>
 PREFIX dbpedia:<http://dbpedia.org/ontology/>
 PREFIX frapo:<http://purl.org/cerif/frapo/>
 INSERT{
-  graph<http://opendata.euskadi.eus/catalogo/id/registro-de-contratos-del-sector-publico-de-euskadi/>{
+  graph<http://es.euskadi.eus/graph/registro-de-contratos-del-sector-publico-de-euskadi>{
  ?uriGeneral a frapo:EmploymentContract;
  pproc:formalizedDate ?fechaFormalizacionParseada;
  dbpedia:status ?uriEstadoContrato;
@@ -109,7 +109,7 @@ INSERT{
   bind(spif:parseDate(?fechaPublicacionDoue, "dd/MM/yyyy") as ?fechaPublicacionDOUEParseada)
 
   #Uris general
-  bind(iri(concat("http://opendata.euskadi.eus/recurso/sector-publico/contrato/", spif:encodeURL(?tipoContrato), "-", spif:encodeURL(?adjudicatario), "-",  ?fechaFormalizacionParseada )) as ?uriGeneral)
+  bind(iri(concat("http://es.euskadi.eus/id/public-sector/administration/contract/", spif:encodeURL(?tipoContrato), "-", spif:encodeURL(?adjudicatario), "-",  ?fechaFormalizacionParseada )) as ?uriGeneral)
 	
   #Uris objetos
   bind(STRLANG(?estadoDeContrato,"es") as ?uriEstadoContrato)
@@ -148,87 +148,87 @@ INSERT{
 
   #Uris predicados
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/poder-adjudicador") as ?uriPoderAdjudicadorGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/poder-adjudicador") as ?uriPoderAdjudicadorGen)
   
-  bind(iri(concat("http://opendata.euskadi.eus/recurso/sector-publico/departamento/", spif:encodeURL(?entidadImpulsora))) as ?uriDepartamento)
+  bind(iri(concat("http://es.euskadi.eus/id/public-sector/administration/department/", spif:encodeURL(?entidadImpulsora))) as ?uriDepartamento)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/codigo-contrato") as ?uricodigoContratoGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/codigo-contrato") as ?uricodigoContratoGen)
 
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/tipo-contrato") as ?uriTipoContratoGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/tipo-contrato") as ?uriTipoContratoGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/ano-contrato") as ?uriAnoContratoGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/ano-contrato") as ?uriAnoContratoGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/contrato-menor") as ?uriContratoMenorGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/contrato-menor") as ?uriContratoMenorGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/ambito") as ?uriAmbitoGen)
+  bind(iri(http://euskadi.eus/def/public-sector/administration/ambito") as ?uriAmbitoGen)
 
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/tipo-administracion") as ?uriTipoAdminGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/tipo-administracion") as ?uriTipoAdminGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/entidad-impulsora") as ?uriEntidadImpulsoraGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/entidad-impulsora") as ?uriEntidadImpulsoraGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/organo-contratante") as ?uriOrganoContrGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/organo-contratante") as ?uriOrganoContrGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/entidad-tramitadora") as ?uriEntidadTramitadoraGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/entidad-tramitadora") as ?uriEntidadTramitadoraGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/mesa-de-contratacion") as ?uriMesaContratacionGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/mesa-de-contratacion") as ?uriMesaContratacionGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/objeto-del-contrato") as ?uriObjetoContratoGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/objeto-del-contrato") as ?uriObjetoContratoGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/cod-identificador-contrato") as ?uriIdentContrGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/cod-identificador-contrato") as ?uriIdentContrGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/lugar-ejecucion") as ?uriLugarEjGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/lugar-ejecucion") as ?uriLugarEjGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/nuts") as ?uriNutsGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/nuts") as ?uriNutsGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/codigo-cpv") as ?uriCodCPVGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/codigo-cpv") as ?uriCodCPVGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/contratacion-por-lotes") as ?uriContraPorLotesGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/contratacion-por-lotes") as ?uriContraPorLotesGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/contratacion-mixto") as ?uriContraMixtoGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/contratacion-mixto") as ?uriContraMixtoGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/acuerdo-marco") as ?uriAcuerdoMarcoGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/acuerdo-marco") as ?uriAcuerdoMarcoGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/contrato-complementario") as ?uriContratatoCompGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/contrato-complementario") as ?uriContratatoCompGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/publicidad") as ?uriPublicidadGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/publicidad") as ?uriPublicidadGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/fecha-publicacion-en-el-DOUE") as ?uriFechaPubDoueGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/fecha-publicacion-en-el-DOUE") as ?uriFechaPubDoueGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/fecha-publicacion-en-perfil-contratante") as ?uriFechaPubPContGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/fecha-publicacion-en-perfil-contratante") as ?uriFechaPubPContGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/fecha-adjudicacion") as ?uriFechaAdjudicacionGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/fecha-adjudicacion") as ?uriFechaAdjudicacionGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/tramitacion") as ?uriTramitacionGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/tramitacion") as ?uriTramitacionGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/procedimiento-de-adjudicacion") as ?uriProcAdjGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/procedimiento-de-adjudicacion") as ?uriProcAdjGen)
 
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/criterios-de-valoracion") as ?uriCriteriosValorGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/criterios-de-valoracion") as ?uriCriteriosValorGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/importe-licitacion-sin-IVA") as ?uriImporteLicitacionSinIVAGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/importe-licitacion-sin-IVA") as ?uriImporteLicitacionSinIVAGen)
 
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/importe-licitacion-con-IVA") as ?uriImporteLicitacionConIVAGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/importe-licitacion-con-IVA") as ?uriImporteLicitacionConIVAGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/IVA-importe-licitacion") as ?uriIVAImporteLicitacionGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/IVA-importe-licitacion") as ?uriIVAImporteLicitacionGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/importe-de-adjudicacion-sin-IVA") as ?uriImporteAdjudicacionsinIVAGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/importe-de-adjudicacion-sin-IVA") as ?uriImporteAdjudicacionsinIVAGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/importe-de-adjudicacion-con-IVA") as ?uriImporteAdjudicacionConIVAGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/importe-de-adjudicacion-con-IVA") as ?uriImporteAdjudicacionConIVAGen)
 
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/IVA-importe-adjudicacion") as ?uriIVAImporteAdjudicacionGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/IVA-importe-adjudicacion") as ?uriIVAImporteAdjudicacionGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/plazo-ejecucion-meses") as ?uriPlazoEjecucionMesesGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/plazo-ejecucion-meses") as ?uriPlazoEjecucionMesesGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/caracter-plurianual") as ?uriCaracterPlurianualGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/caracter-plurianual") as ?uriCaracterPlurianualGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/anualidad") as ?uriAnualidadGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/anualidad") as ?uriAnualidadGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/adjudicatario") as ?uriAdjudicatarioGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/adjudicatario") as ?uriAdjudicatarioGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/indicador-ingreso") as ?uriIndicadorIngresoGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/indicador-ingreso") as ?uriIndicadorIngresoGen)
 
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/modificacion-objeto") as ?uriModificacionObjetoGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/modificacion-objeto") as ?uriModificacionObjetoGen)
   
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/continuidad-contrato") as ?uriContinuidadContratoGen)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/continuidad-contrato") as ?uriContinuidadContratoGen)
 
  }

@@ -30,3 +30,7 @@ Asumiendo que las URIs generadas para cargos son constantes.
 * Un unico grafo con dos idiomas lanpostua/cargo en vcard:role. Ventaja: un solo conversor Java. Desventaja: el dataset EU no se convierte.
 * Dos grafos identicos con solo diferencia en Lanpostua/Cargo. Ventaja: dos conversores Java muy parecidos. Desventaja: muchos triples se duplican: en el caso de recursos da igual, en el caso de literales no (si se hace una consulta al default graph, los rdfs:comment duplicados saldrán dos veces).
 * El grafo ES contiene todo menos Lanpostu, y el grafo EU solo contiene Lanpostu. Ventaja: menos triples. Desventaja: dos conversores Java, uno solo con las lo correspondiente a Lanpostu.
+
+## DCAT
+
+He quitado la distribucion SPARQL y la TTL original, he añadido la de Linked Data y la de nquads

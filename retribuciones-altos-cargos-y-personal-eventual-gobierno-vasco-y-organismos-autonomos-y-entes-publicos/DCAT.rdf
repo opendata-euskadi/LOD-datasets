@@ -8,7 +8,7 @@
     xmlns:time="http://www.w3.org/2006/time#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-  <dcat:Dataset rdf:about="http://es.euskadi.eus/dataset/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos">
+  <dcat:Dataset rdf:about="http://opendata.euskadi.eus/datos/-/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos/">
     <dcat:distribution>
       <dcat:Distribution rdf:about="http://opendata.euskadi.eus/contenidos/ds_rrhh/sueldos_altos_cargos_2011/es_sueldos/adjuntos/retribuciones_nominativas.xlsx">
         <dct:format>

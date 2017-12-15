@@ -122,34 +122,34 @@ INSERT{
   bind(spif:parseDate(?date, "dd/MM/yyyy") as ?fechaParseada)
 	#URIS elementos
  
-  bind(iri(concat("http://opendata.euskadi.eus/recurso/medio-ambiente/calidad-del-aire/elemento/CO-", spif:encodeURL(?fechaParseada) )) as ?uriCO)
-  bind(iri(concat("http://opendata.euskadi.eus/recurso/medio-ambiente/calidad-del-aire/elemento/CO8h-", spif:encodeURL(?fechaParseada) )) as ?uriCO8h)
-  bind(iri(concat("http://opendata.euskadi.eus/recurso/medio-ambiente/calidad-del-aire/elemento/CO8hAirQuality-", spif:encodeURL(?fechaParseada) )) as ?uriCO8hAirQuality)
-  bind(iri(concat("http://opendata.euskadi.eus/recurso/medio-ambiente/calidad-del-aire/elemento/NO-", spif:encodeURL(?fechaParseada) )) as ?uriNO)
-  bind(iri(concat("http://opendata.euskadi.eus/recurso/medio-ambiente/calidad-del-aire/elemento/NO2-", spif:encodeURL(?fechaParseada) )) as ?uriNO2)
-  bind(iri(concat("http://opendata.euskadi.eus/recurso/medio-ambiente/calidad-del-aire/elemento/NO2max-", spif:encodeURL(?fechaParseada) )) as ?uriNO2max)
-  bind(iri(concat("http://opendata.euskadi.eus/recurso/medio-ambiente/calidad-del-aire/elemento/NO2AirQuality-", spif:encodeURL(?fechaParseada) )) as ?uriNO2AirQuality)
-  bind(iri(concat("http://opendata.euskadi.eus/recurso/medio-ambiente/calidad-del-aire/elemento/NOX-", spif:encodeURL(?fechaParseada) )) as ?uriNOX)
-  bind(iri(concat("http://opendata.euskadi.eus/recurso/medio-ambiente/calidad-del-aire/elemento/PM10-", spif:encodeURL(?fechaParseada) )) as ?uriPM10)
-  bind(iri(concat("http://opendata.euskadi.eus/recurso/medio-ambiente/calidad-del-aire/elemento/PM10AirQuality-", spif:encodeURL(?fechaParseada) )) as ?uriPM10AirQuality)
-  bind(iri(concat("http://opendata.euskadi.eus/recurso/medio-ambiente/calidad-del-aire/elemento/PM25-", spif:encodeURL(?fechaParseada) )) as ?uriPM25)
-  bind(iri(concat("http://opendata.euskadi.eus/recurso/medio-ambiente/calidad-del-aire/elemento/PM25AirQuality-", spif:encodeURL(?fechaParseada) )) as ?uriPM25AirQuality)
-  bind(iri(concat("http://opendata.euskadi.eus/recurso/medio-ambiente/calidad-del-aire/elemento/ICAEstacion-", spif:encodeURL(?fechaParseada) )) as ?uriICAEstacion)
+  bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/element/CO-", spif:encodeURL(?fechaParseada) )) as ?uriCO)
+  bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/element/CO8h-", spif:encodeURL(?fechaParseada) )) as ?uriCO8h)
+  bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/element/CO8hAirQuality-", spif:encodeURL(?fechaParseada) )) as ?uriCO8hAirQuality)
+  bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/element/NO-", spif:encodeURL(?fechaParseada) )) as ?uriNO)
+  bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/element/NO2-", spif:encodeURL(?fechaParseada) )) as ?uriNO2)
+  bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/element/NO2max-", spif:encodeURL(?fechaParseada) )) as ?uriNO2max)
+  bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/element/NO2AirQuality-", spif:encodeURL(?fechaParseada) )) as ?uriNO2AirQuality)
+  bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/element/NOX-", spif:encodeURL(?fechaParseada) )) as ?uriNOX)
+  bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/element/PM10-", spif:encodeURL(?fechaParseada) )) as ?uriPM10)
+  bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/element/PM10AirQuality-", spif:encodeURL(?fechaParseada) )) as ?uriPM10AirQuality)
+  bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/element/PM25-", spif:encodeURL(?fechaParseada) )) as ?uriPM25)
+  bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/element/PM25AirQuality-", spif:encodeURL(?fechaParseada) )) as ?uriPM25AirQuality)
+  bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/element/ICAEstacion-", spif:encodeURL(?fechaParseada) )) as ?uriICAEstacion)
   
       #Uris elementos (predicados) generales 
-bind(iri(concat("http://opendata.euskadi.eus/def/medio-ambiente/medicion/CO" )) as ?uriCOgen)
-bind(iri(concat("http://opendata.euskadi.eus/def/medio-ambiente/medicion/CO8h" )) as ?uriCO8hgen)
-bind(iri(concat("http://opendata.euskadi.eus/def/medio-ambiente/medicion/CO8hAirQuality" )) as ?uriCO8hAirQualitygen)
-bind(iri(concat("http://opendata.euskadi.eus/def/medio-ambiente/medicion/NO" )) as ?uriNOgen)
-bind(iri(concat("http://opendata.euskadi.eus/def/medio-ambiente/medicion/NO2" )) as ?uriNO2gen)
-bind(iri(concat("http://opendata.euskadi.eus/def/medio-ambiente/medicion/NO2max" )) as ?uriNO2maxgen)
-bind(iri(concat("http://opendata.euskadi.eus/def/medio-ambiente/medicion/NO2AirQuality" )) as ?uriNO2AirQualitygen)
-bind(iri(concat("http://opendata.euskadi.eus/def/medio-ambiente/medicion/NOX" )) as ?uriNOXgen)
-bind(iri(concat("http://opendata.euskadi.eus/def/medio-ambiente/medicion/PM10" )) as ?uriPM10gen)
-bind(iri(concat("http://opendata.euskadi.eus/def/medio-ambiente/medicion/PM10AirQuality" )) as ?uriPM10AirQualitygen)
-bind(iri(concat("http://opendata.euskadi.eus/def/medio-ambiente/medicion/PM25" )) as ?uriPM25gen)
-bind(iri(concat("http://opendata.euskadi.eus/def/medio-ambiente/medicion/PM25AirQuality" )) as ?uriPM25AirQualitygen)
-bind(iri(concat("http://opendata.euskadi.eus/def/medio-ambiente/medicion/ICAEstacion" )) as ?uriICAEstaciongen)
+bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/meassurement/CO" )) as ?uriCOgen)
+bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/meassurement/CO8h" )) as ?uriCO8hgen)
+bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/meassurement/CO8hAirQuality" )) as ?uriCO8hAirQualitygen)
+bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/meassurement/NO" )) as ?uriNOgen)
+bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/meassurement/NO2" )) as ?uriNO2gen)
+bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/meassurement/NO2max" )) as ?uriNO2maxgen)
+bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/meassurement/NO2AirQuality" )) as ?uriNO2AirQualitygen)
+bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/meassurement/NOX" )) as ?uriNOXgen)
+bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/meassurement/PM10" )) as ?uriPM10gen)
+bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/meassurement/PM10AirQuality" )) as ?uriPM10AirQualitygen)
+bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/meassurement/PM25" )) as ?uriPM25gen)
+bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/meassurement/PM25AirQuality" )) as ?uriPM25AirQualitygen)
+bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/meassurement/ICAEstacion" )) as ?uriICAEstaciongen)
   
   #Valores Calidad del aire
   bind(STRLANG(?PM25AirQuality1,"es") as ?PM25AirQualityEsp)
@@ -167,9 +167,9 @@ bind(iri(concat("http://opendata.euskadi.eus/def/medio-ambiente/medicion/ICAEsta
   bind(STRLANG(?ICAEstacion1,"es") as ?ICAEstacionEsp)
   bind(STRLANG(?ICAEstacion2,"eu") as ?ICAEstacionEusk)
     #Nombre de la medicion
-  bind(iri(concat("http://opendata.euskadi.eus/recurso/medio-ambiente/calidad-del-aire/observation/AV-GASTEIZ-", spif:encodeURL(?fechaParseada) )) as ?uriEstacion)
+  bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/observation/AV-GASTEIZ-", spif:encodeURL(?fechaParseada) )) as ?uriEstacion)
   #Uri medicion
-  bind(iri(concat("http://opendata.euskadi.eus/def/medio-ambiente/calidad-del-aire/medicion" )) as ?uriMedicion)
+  bind(iri(concat("http://euskadi.eus/def/environment/air-quality/meassurement")) as ?uriMedicion)
   
 
   #Comentarios elementos
@@ -191,6 +191,6 @@ bind(iri(concat("http://opendata.euskadi.eus/def/medio-ambiente/medicion/ICAEsta
   bind(iri("http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3") as ?gmcubico)
   bind(iri("http://dd.eionet.europa.eu/vocabulary/uom/concentration/ug.m-3") as ?umcubico)
  
-  bind(iri("http://opendata.euskadi.eus/recurso/medio-ambiente/estacion/C040") as ?nomEst)
+  bind(iri("http://es.euskadi.eus/id/environment/air-quality/meassurement-station/C040") as ?nomEst)
 
 }

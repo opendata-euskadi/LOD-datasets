@@ -22,7 +22,7 @@
 # Dataset
 
 # Dataset principal en la Web (URI dataset resuelve mediante negociacion de contenido, ver arquitectura de URIs)
-<http://es.euskadi.eus/dataset/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos>
+<http://opendata.euskadi.eus/datos/-/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos/>
 
 # Distribucion en turtle, rdfxml, etc se hacer como siempre, solo que el archivo viene del conector
 dcat:distribution <http://es.euskadi.eus/distribution/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos> .

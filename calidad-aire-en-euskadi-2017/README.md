@@ -6,22 +6,20 @@
 # Linked Data
 
 * Archivo DCAT con URI de dataset modificada para cumplir el esquema de URIs acordado: `DCAT.rdf`
-* URI dataset: http://opendata.euskadi.eus/catalogo/id/calidad-aire-en-euskadi-2017
+* URI dataset: http://opendata.euskadi.eus/datos/-/calidad-aire-en-euskadi-2017/
 * Archivo DCAT con prototipo de grafo para Linked Data: `DCAT-LinkedData.ttl`
-* Grafo datos en Triple Store: http://opendata.euskadi.eus/dataset/id/calidad-aire-en-euskadi-2017
+* Grafo datos en Triple Store: http://es.euskadi.eus/graph/calidad-aire-en-euskadi-2017
 * Página Web simulando ficha de Open Data Euskadi (rama gh-pages): https://opendata-euskadi.github.io/LOD-datasets/calidad-aire-en-euskadi-2017 
 * dataset en rdf: `rdf/`
 * Consultas contra dataset: `sparql/`
 * SPARQL y JSON para pipeline OntoRefine: `ontorefine/`
 
-# URIs ejemplo definitivas
+# URIs ejemplo 
 
-Estas URIs son adaptaciones de las URIs del dataset a la arquitectura de URIs consensuada (por ejemplo cambian idioma y `id`):
+Estas URIs están en los datos pero no cumplen la arquitectura de URIs consensuada:
 
-* URI dataset DCAT: `http://es.euskadi.eus/id/catalogo/calidad-aire-en-euskadi-2017`.
-* URI grafo dataset: `http://es.euskadi.eus/id/dataset/calidad-aire-en-euskadi-2017`.
 * Observación de calidad del aire en el sensor de Av Gasteiz el 2017-01-26: `http://es.euskadi.eus/id/medio-ambiente/calidad-del-aire/observation/AV-GASTEIZ-2017-01-26`. `medio-ambiente` es un sector de la NTI, `calidad-del-aire` un dominio que hemos creado, y `observation` una clase del vocabulario [Data Cube](https://www.w3.org/TR/vocab-data-cube/).
-* Estación de medición (no tiene dominio): `http://es.eu skadi.eus/id/medio-ambiente/estacion/C040`.
+* Estación de medición (no tiene dominio): `http://es.euskadi.eus/id/medio-ambiente/estacion/C040`.
 * Propiedad interna para unir observacion con medicion concreta (sin idioma): `http://euskadi.eus/def/medio-ambiente/calidad-del-aire/medicion`. 
 * Clase interna de todas las mediciones del monoxido del carbono: `http://euskadi.eus/def/medio-ambiente/medicion/CO`.
 * Monoxido de carbono 2017-01-26: `http://es.euskadi.eus/id/medio-ambiente/calidad-del-aire/elemento/CO-2017-01-26`.

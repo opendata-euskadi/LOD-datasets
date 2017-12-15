@@ -42,11 +42,11 @@ INSERT{
   }
   
   #Uri predicados
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/cargo-publico") as ?uriCargoPublicoPred)
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/id-organo") as ?uriIdOrganoPred)
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/organo") as ?uriOrganoPred)
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/id-centro-organico") as ?uriIdCentroOrganicoPred)
-  bind(iri("http://opendata.euskadi.eus/def/sector-publico/contrato/centro-organico") as ?uriCentroOrganicoPred)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/contrato/cargo-publico") as ?uriCargoPublicoPred)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/contrato/id-organo") as ?uriIdOrganoPred)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/contrato/organo") as ?uriOrganoPred)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/contrato/id-centro-organico") as ?uriIdCentroOrganicoPred)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/contrato/centro-organico") as ?uriCentroOrganicoPred)
 
   #Parseo de las fechas
   bind(spif:parseDate(?FechaInicioRelacion, "dd/MM/yyyy") as ?fechaInicioRelParseada)
@@ -58,10 +58,10 @@ INSERT{
   bind(STRLANG(?Organo,"es") as ?uriOrgano)
   bind(STRLANG(?CentroOrganico,"es") as ?uriCentroOrganico)
   #Uri general
-  bind(iri(concat("http://opendata.euskadi.eus/recurso/sector-publico/contrato/", spif:encodeURL(?CargoPublico), "-", spif:encodeURL(?empleado), "-", spif:encodeURL(?Departamento), "-", spif:encodeURL(?OrganoConGuion), "-",?fechaActParseada )) as ?uriGeneral)
+  bind(iri(concat("http://es.euskadi.eus/id/public-sector/administration/contract/", spif:encodeURL(?CargoPublico), "-", spif:encodeURL(?empleado), "-", spif:encodeURL(?Departamento), "-", spif:encodeURL(?OrganoConGuion), "-",?fechaActParseada )) as ?uriGeneral)
   #Uri departamento
-  bind(iri(concat("http://opendata.euskadi.eus/recurso/sector-publico/departamento/", spif:encodeURL(?Departamento))) as ?uriDepartamento)
+  bind(iri(concat("http://es.euskadi.eus/id/public-sector/administration/department/", spif:encodeURL(?Departamento))) as ?uriDepartamento)
   #Uri empleado 
-  bind(iri(concat("http://opendata.euskadi.eus/recurso/sector-publico/employee/", spif:encodeURL(?empleado))) as ?uriEmployee)
+  bind(iri(concat("http://es.euskadi.eus/id/public-sector/administration/employee/", spif:encodeURL(?empleado))) as ?uriEmployee)
 
 }

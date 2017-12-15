@@ -15,7 +15,7 @@
   dc11:language "es" ;
   dc:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/A16003011> ;
   dc:title "Gu?a de la Comunicaci?n del Gobierno Vasco: datos de contacto de las entidades de Euskadi"@es ;
-  dcat:distribution <http://gida.irekia.euskadi.eus/open_data/gc_entidades_datos_completos.vcf>, <http://gida.irekia.euskadi.eus/open_data/gc_entidades_datos_completos.nquads>, 
+  dcat:distribution <http://gida.irekia.euskadi.eus/open_data/gc_entidades_datos_completos.vcf>, <http://es.euskadi.eus/distribution/open_data/gc_entidades_datos_completos.nquads>, 
   <http://es.euskadi.eus/distribution/guia-comunicacion-gobierno-vasco-datos-contacto-entidades-euskadi>, 
   <http://gida.irekia.euskadi.eus/open_data/gc_entidades_datos_completos.csv> ;
   dc:accrualPeriodicity [
@@ -50,7 +50,7 @@
   sd:namedGraph <http://es.euskadi.eus/graph/guia-comunicacion-entidades> ;
   void:sparqlEndpoint <http://es.euskadi.eus/sparql/guia-comunicacion-gobierno-vasco-datos-contacto-entidades-euskadi> .
 
-<http://gida.irekia.euskadi.eus/open_data/gc_entidades_datos_completos.nquads>
+<http://es.euskadi.eus/distribution/open_data/gc_entidades_datos_completos.nquads>
   a dcat:Distribution ;
   dc:format [
     a dc:IMT ;

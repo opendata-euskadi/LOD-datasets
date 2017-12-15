@@ -1,0 +1,76 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns0: <http://www.w3.org/2006/time#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+
+<http://opendata.euskadi.eus/catalogo/-/guia-de-la-comunicacion-del-gobierno-vasco-datos-de-contacto-de-los-representantes-y-cargos-de-entidades/>
+  a dcat:Dataset ;
+  dcat:keyword "gerentes"@es, "colegios profesionales"@es, "guÃ­a comunicaciÃ³n"@es, "personas"@es, "polÃ­ticos"@es, "empresas"@es, "educaciÃ³n"@es, "cultura"@es, "cargos"@es, "investigaciÃ³n"@es, "comunicaciÃ³n"@es, "contacto"@es, "administraciones"@es, "transportes"@es, "representantes"@es, "euskara"@es, "pÃºblicas"@es, "consulados"@es, "partidos polÃ­ticos"@es ;
+  dc:description "La GuÃ­a de ComunicaciÃ³n Abierta es un servicio gratuito al servicio de la ciudadanÃ­a para el acceso y publicaciÃ³n de los datos de contacto pÃºblicos de organismos, instituciones, personas y cargos de la Comunidad AutÃ³noma de Euskadi, generada y creada por la SecretarÃ­a General de ComunicaciÃ³n de Presidencia del Gobierno Vasco.Este conjunto de datos incluye los datos de contacto de los representantes y cargos de las entidades publicadas en este guÃ­a: administraciones y entes pÃºblicos, partidos polÃ­ticos, consulados, colegios profesionales, centros de investigaciÃ³n, entidades relacionadas con la actividad socio-econÃ³mica y laboral, con la educaciÃ³n, la cultura, transportes, comunicaciÃ³n, euskara, etc."@es ;
+  dcat:distribution 
+  <http://gida.irekia.euskadi.eus/open_data/gc_cargos_datos_completos.vcf>, 
+  <http://gida.irekia.euskadi.eus/open_data/gc_cargos_datos_completos.csv>, 
+  <http://es.euskadi.eus/distribution/open_data/gc_cargos_datos_completos.nquads>,
+  <http://es.euskadi.eus/distribution/guia-de-la-comunicacion-del-gobierno-vasco-datos-de-contacto-de-los-representantes-y-cargos-de-entidades> ;
+  dc:license <http://creativecommons.org/licenses/by/4.0/> ;
+  dc:references <http://gida.irekia.euskadi.eus/es>, <http://opendata.euskadi.eus/w79-resformx/es?r01kQry=i:r01mtpd14bb6125c691b5bc30d1db9557aeab4b08d;tC:euskadi;tF:opendata;tT:ds_localizaciones,ds_rrhh;m:fullText.LIKE.guia,documentLanguage.EQ.es;p:Inter;> ;
+  dc:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/A16003011> ;
+  dc:identifier "http://opendata.euskadi.eus/catalogo/-/guia-de-la-comunicacion-del-gobierno-vasco-datos-de-contacto-de-los-representantes-y-cargos-de-entidades/" ;
+  dc:accrualPeriodicity [
+    a dc:Frequency ;
+    rdf:value [
+      a <http://www.w3.org/2006/time#DurationDescription> ;
+      ns0:months 1 ;
+      rdfs:label "Mensual"
+    ]
+  ] ;
+  dc:spatial <http://datos.gob.es/recurso/sector-publico/territorio/autonomia/pais-vasco> ;
+  dc:modified "2016-09-15T00:00:00"^^xsd:date ;
+  dc:issued "2012-07-13T00:00:00"^^xsd:date ;
+  dc11:language "es" ;
+  dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> ;
+  dc:title "Gu?a de la Comunicaci?n del Gobierno Vasco: datos de contacto de los representantes y cargos de entidades de Euskadi"@es .
+
+<http://es.euskadi.eus/distribution/guia-de-la-comunicacion-del-gobierno-vasco-datos-de-contacto-de-los-representantes-y-cargos-de-entidades>
+  a dcat:Distribution, void:Dataset ;
+  sd:namedGraph <http://es.euskadi.eus/graph/guia-comunicacion-cargos> ;
+  void:sparqlEndpoint <http://es.euskadi.eus/sparql/guia-de-la-comunicacion-del-gobierno-vasco-datos-de-contacto-de-los-representantes-y-cargos-de-entidades> .
+
+<http://es.euskadi.eus/distribution/open_data/gc_cargos_datos_completos.nquads>
+  a dcat:Distribution ;
+  dc:format [
+    a dc:IMT ;
+    rdfs:label "RDF-nquads" ;
+    rdf:value "application/n-quads"
+  ] ;
+  dcat:byteSize 0.0 ;
+  dcat:accessURL "http://gida.irekia.euskadi.eus/open_data/gc_cargos_datos_completos.nquads"^^xsd:anyURI ;
+  dc:title "Datos de contacto"@es .
+
+<http://gida.irekia.euskadi.eus/open_data/gc_cargos_datos_completos.vcf>
+  a dcat:Distribution ;
+  dc:format [
+    a dc:IMT ;
+    rdfs:label "vCard-texto" ;
+    rdf:value "text/vcard"
+  ] ;
+  dcat:byteSize 0.0 ;
+  dcat:accessURL "http://gida.irekia.euskadi.eus/open_data/gc_cargos_datos_completos.vcf"^^xsd:anyURI ;
+  dc:title "Datos de contacto"@es .
+
+<http://gida.irekia.euskadi.eus/open_data/gc_cargos_datos_completos.csv>
+  a dcat:Distribution ;
+  dc:format [
+    a dc:IMT ;
+    rdfs:label "CSV" ;
+    rdf:value "text/csv"
+  ] ;
+  dcat:byteSize 409600.0 ;
+  dcat:accessURL "http://gida.irekia.euskadi.eus/open_data/gc_cargos_datos_completos.csv"^^xsd:anyURI ;
+  dc:title "Datos de contacto"@es .
+

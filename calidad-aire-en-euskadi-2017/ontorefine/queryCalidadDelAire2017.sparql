@@ -10,7 +10,7 @@ PREFIX sdmx-measure:    <http://purl.org/linked-data/sdmx/2009/measure#>
 PREFIX medicion: <http://opendata.euskadi.eus/medicion/AV-GASTEIZ/>
 
 INSERT{
-    graph<http://opendata.euskadi.eus/catalogo/id/calidad-aire-en-euskadi-2017/>{
+    graph<http://es.euskadi.eus/graph/calidad-aire-en-euskadi-2017>{
   #Uniones generales
   ?uriEstacion a qb:Observation;
   dct:date ?fechaParseada;

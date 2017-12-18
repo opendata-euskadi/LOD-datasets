@@ -9,22 +9,30 @@ En este repositorio se encuentran los datos de la [guía de la comunicación abi
 
 Los datos se dividen en entidades y cargos, y ambos tienen versión en Euskera y Castellano. Los DCAT se obtuvieron inspeccionando el código fuente de cada página web, ya que no hay ningún enlace visible.
 
-* Entidades: 
- [guia-comunicacion-gobierno-vasco-datos-contacto-entidades-euskadi](http://opendata.euskadi.eus/catalogo/-/guia-comunicacion-gobierno-vasco-datos-contacto-entidades-euskadi/)
- [eusko-jaurlaritzaren-komunikazio-gida-euskadiko-erakundeen-kontaktu-datuak/](http://opendata.euskadi.eus/katalogoa/-/eusko-jaurlaritzaren-komunikazio-gida-euskadiko-erakundeen-kontaktu-datuak/)
+### Entidades 
 
-* Cargos:
- [guia-de-la-comunicacion-del-gobierno-vasco-datos-de-contacto-de-los-representantes-y-cargos-de-entidades](http://opendata.euskadi.eus/catalogo/-/guia-de-la-comunicacion-del-gobierno-vasco-datos-de-contacto-de-los-representantes-y-cargos-de-entidades/)
- [eusko-jaurlaritzaren-komunikazio-gida-erakundeetako-kargu-eta-ordezkarien-kontaktu-datuak](http://opendata.euskadi.eus/katalogoa/-/eusko-jaurlaritzaren-komunikazio-gida-erakundeetako-kargu-eta-ordezkarien-kontaktu-datuak/)
+* [guia-comunicacion-gobierno-vasco-datos-contacto-entidades-euskadi](http://opendata.euskadi.eus/catalogo/-/guia-comunicacion-gobierno-vasco-datos-contacto-entidades-euskadi/).
+* [eusko-jaurlaritzaren-komunikazio-gida-euskadiko-erakundeen-kontaktu-datuak/](http://opendata.euskadi.eus/katalogoa/-/eusko-jaurlaritzaren-komunikazio-gida-euskadiko-erakundeen-kontaktu-datuak/).
 
+Las dos versiones son el mismo CSV, habiendo una columna para el nombre de la entidad en Castellano (`Entidad`) y otra para Euskara (`Erakundea`).
 
+### Cargos
 
-tabla en markdown
+* [guia-de-la-comunicacion-del-gobierno-vasco-datos-de-contacto-de-los-representantes-y-cargos-de-entidades](http://opendata.euskadi.eus/catalogo/-/guia-de-la-comunicacion-del-gobierno-vasco-datos-de-contacto-de-los-representantes-y-cargos-de-entidades/).
+* [eusko-jaurlaritzaren-komunikazio-gida-erakundeetako-kargu-eta-ordezkarien-kontaktu-datuak](http://opendata.euskadi.eus/katalogoa/-/eusko-jaurlaritzaren-komunikazio-gida-erakundeetako-kargu-eta-ordezkarien-kontaktu-datuak/).
+
+Las dos versiones son el mismo CSV, habiendo una columna para el cargo en Castellano (`Cargo`) y otra para Euskara (`Lanpostua`).
 
 ## Problemas en los CSV (Baja calidad de los datos)
 
+La libreria que he usado par parsear los CSV es [Apache Commons CSV](https://commons.apache.org/proper/commons-csv/).
+
+Los CSV tienen bastantes problemas. El primero y más importante es que muchas líneas ni siquiera tienen el mismo número de celdas que se define en la cabecera, según el método [isConsistent](https://commons.apache.org/proper/commons-csv/apidocs/org/apache/commons/csv/CSVRecord.html#isConsistent--). 
+
 Mirar codigo
 Mirar LOG
+
+consistent
 
 Los datos de cargos y de entidades no comparten nada en comun, con lo que no se pueden crear URIs de entidades para enlazarlos:
 

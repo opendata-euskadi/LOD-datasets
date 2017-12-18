@@ -1,6 +1,8 @@
 Datos de la guia de la comunicacion irekia en RDF
 =================================================
 
+[create an anchor](#anchors-in-markdown)
+
 ## Introducción
 
 En este repositorio se encuentran los datos de la [guía de la comunicación abierta](http://gida.irekia.euskadi.eus/) transformados a RDF. La transformación se ha hecho mediante un plugin desarrollado para la plataforma [ALDAPA](https://github.com/mikel-egana-aranguren/ALDAPA/tree/feature-rml.io/plugins/src/main/java/es/eurohelp/lod/aldapa/impl/transformation/guiacomunicacion). Durante el proceso de transformación me he encontrado con muchos problemas que sin duda nos encontraremos con otros datasets.
@@ -89,7 +91,12 @@ Al DCAT original le he quitado la distribucion SPARQL y la TTL, y he añadido un
 Yo he usado la librería [RDF4J](http://rdf4j.org/) para generar el RDF, pero también se podría usar [JENA](http://jena.apache.org/). Jorge me comentó que JENA tiene una función para importar ontologías y que las clases y propiedades de esas ontologías estén disponibles como enumeraciones Java, en vez de crearlas a mano, como hago yo. 
 
 
-[create an anchor](#anchors-in-markdown)
+
 
 ## Anchors in markdown
 
+blblalalalla
+lalalalal
+
+
+alla

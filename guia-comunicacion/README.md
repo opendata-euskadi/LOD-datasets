@@ -36,18 +36,29 @@ Mirar LOG
 
 El dataset RDF publicado en Open Data Euskadi usaba una versión antigua de la ontologia [VCARD](https://www.w3.org/TR/vcard-rdf/), yo me estoy basando en una la última versión, que difieren. 
 
+La idea original es que cada dataset en cada idioma (cada CSV) va a convertirse en un grafo con su DCAT correspondiente dentro de la Triple Store. Sin embargo, en este caso los dos CSVs son idénticos, teniendo algunas columnas que se desglosan en columnas por idiomas (`Entidad`/`Erakundea`;`Cargo`/`Lanpostua`). Tomando el CSV de cargos como ejemplo, hay tres opciones:
 
-Grafos: la idea original es usar un grafo por cada CSV, pero aquí tenemos un caso raro, Asumiendo que las URIs generadas para cargos son constantes.
+* Un único grafo con dos valores diferentes en vcard:role, uno para cada idioma (@es, @eu). 
+	* Ventaja: un solo conversor Java. 
+	* Desventajas: el cargo tiene que ser un literal en vez de un recurso (Ver URIs de referencia); el dataset EU no se convierte.
 
-* Un unico grafo con dos idiomas lanpostua/cargo en vcard:role. Ventaja: un solo conversor Java. Desventaja: el dataset EU no se convierte.
-* Dos grafos identicos con solo diferencia en Lanpostua/Cargo. Ventaja: dos conversores Java muy parecidos. Desventaja: muchos triples se duplican: en el caso de recursos da igual, en el caso de literales no (si se hace una consulta al default graph, los rdfs:comment duplicados saldrán dos veces).
-* El grafo ES contiene todo menos Lanpostu, y el grafo EU solo contiene Lanpostu. Ventaja: menos triples. Desventaja: dos conversores Java, uno solo con las lo correspondiente a Lanpostu.
+* Dos grafos idénticos con solo diferencia en Lanpostua/Cargo. 
+	* Ventajas: el cargo puede ser un recurso en vez de un literal (Ver URIs de referencia); dos conversores Java muy parecidos. 
+	* Desventaja: muchos triples se duplican: en el caso de recursos da igual, en el caso de literales no (si se hace una consulta al default graph, los rdfs:comment duplicados saldrán dos veces).
+* El grafo ES contiene todo menos `Lanpostu`, y el grafo EU solo contiene `Lanpostu`. 
+	* Ventajas: el cargo puede ser un recurso en vez de un literal (Ver URIs de referencia); menos triples. 
+	* Desventaja: dos conversores Java, uno solo con las lo correspondiente a Lanpostu.
 
+Grafos entidades
 
-Los datos de cargos y de entidades no comparten nada en comun, con lo que no se pueden crear URIs de entidades para enlazarlos:
+Relacionar cargos con entidades sería muy interesante pero ahora no se puede hacer
+Los datos de cargos y de entidades no comparten nada en comun, con lo que no se pueden crear URIs de entidades para enlazarlos (Ver URIs de referencia):
 
 cargos: "Delegado de Álava, Kristau Eskola"
 entidad: "Kristau eskola"
+
+URIs de referencia a generar:
+* Cargos
 
 ## DCAT
 
@@ -57,5 +68,5 @@ prociones de DCAT
 
 ## Mecánica de transformación
 
-Yo he usado la librería [RDF4J](http://rdf4j.org/) para generar el RDF, pero también se podría usar [JENA](http://jena.apache.org/). Según @jareizaga, JENA tiene una función para importar ontologías y que las clases y propiedades de esas ontologías estén disponibles como enumeraciones Java, en vez de crearlas a mano, como hago yo. 
+Yo he usado la librería [RDF4J](http://rdf4j.org/) para generar el RDF, pero también se podría usar [JENA](http://jena.apache.org/). Jorge me comentó que JENA tiene una función para importar ontologías y que las clases y propiedades de esas ontologías estén disponibles como enumeraciones Java, en vez de crearlas a mano, como hago yo. 
 

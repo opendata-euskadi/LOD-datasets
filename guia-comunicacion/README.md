@@ -43,7 +43,7 @@ El dataset RDF publicado en Open Data Euskadi usaba una versión antigua de la o
 
 La idea original es que cada dataset en cada idioma (cada CSV) va a convertirse en un grafo con su DCAT correspondiente dentro de la Triple Store. Sin embargo, en este caso los dos CSVs son idénticos, teniendo algunas columnas que se desglosan en columnas por idiomas (`Entidad`/`Erakundea`;`Cargo`/`Lanpostua`). Tomando el CSV de cargos como ejemplo, hay tres opciones:
 
-1. Un único grafo con dos valores diferentes en vcard:role, uno para cada idioma (@es, @eu). 
+1. Un único grafo con dos valores diferentes en `vcard:role`, uno para cada idioma (`@es`, `@eu`). 
 	* Ventaja: un solo conversor Java. 
 	* Desventajas: el cargo tiene que ser un literal en vez de un recurso (Ver URIs de referencia); el dataset EU no se convierte.
 
@@ -87,4 +87,9 @@ Al DCAT original le he quitado la distribucion SPARQL y la TTL, y he añadido un
 ## Mecánica de transformación
 
 Yo he usado la librería [RDF4J](http://rdf4j.org/) para generar el RDF, pero también se podría usar [JENA](http://jena.apache.org/). Jorge me comentó que JENA tiene una función para importar ontologías y que las clases y propiedades de esas ontologías estén disponibles como enumeraciones Java, en vez de crearlas a mano, como hago yo. 
+
+
+[create an anchor](#anchors-in-markdown)
+
+## Anchors in markdown
 

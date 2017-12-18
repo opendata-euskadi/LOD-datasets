@@ -1,7 +1,7 @@
 Datos de la guia de la comunicacion irekia en RDF
 =================================================
 
-[create an anchor](#anchors-in-markdown)
+
 
 ## Introducción
 
@@ -47,7 +47,7 @@ La idea original es que cada dataset en cada idioma (cada CSV) va a convertirse 
 
 1. Un único grafo con dos valores diferentes en `vcard:role`, uno para cada idioma (`@es`, `@eu`). 
 	* Ventaja: un solo conversor Java. 
-	* Desventajas: el cargo tiene que ser un literal en vez de un recurso (Ver URIs de referencia); el dataset EU no se convierte.
+	* Desventajas: el cargo tiene que ser un literal en vez de un recurso: [URIs de referencia](#uris-de-referencia); el dataset EU no se convierte.
 
 2. Dos grafos idénticos con solo diferencia en Lanpostua/Cargo. 
 	* Ventajas: el cargo puede ser un recurso en vez de un literal (Ver URIs de referencia); dos conversores Java muy parecidos. 
@@ -58,6 +58,11 @@ La idea original es que cada dataset en cada idioma (cada CSV) va a convertirse 
 
 
 Relacionar cargos con entidades sería muy interesante pero ahora no se puede hacer, ya que los datos de cargos y de entidades no comparten nada en común, con lo que no se pueden crear URIs de entidades para enlazarlos (Ver URIs de referencia). Por ejemplo el cargo "Delegado de Álava, Kristau Eskola" no tiene una entidad enlazable, tan sólo "Kristau eskola". Esto realmente afecta a la calidad de consultas SPARQL que se pueden hacer. 
+
+
+[URIs de referencia](#uris-de-referencia)
+
+## URIs de referencia
 
 URIs de referencia a generar (el programa debería obtener esta URIs de una lista, en vez de generarlas):
 * Cargos.
@@ -92,11 +97,3 @@ Yo he usado la librería [RDF4J](http://rdf4j.org/) para generar el RDF, pero ta
 
 
 
-
-## Anchors in markdown
-
-blblalalalla
-lalalalal
-
-
-alla

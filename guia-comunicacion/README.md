@@ -49,15 +49,15 @@ La idea original es que cada dataset en cada idioma (cada CSV) va a convertirse 
 	* Ventaja: un solo conversor Java. 
 	* Desventajas: el cargo tiene que ser un literal en vez de un recurso: [URIs de referencia](#uris-de-referencia); el dataset EU no se convierte.
 
-2. Dos grafos idénticos con solo diferencia en Lanpostua/Cargo. 
-	* Ventajas: el cargo puede ser un recurso en vez de un literal (Ver URIs de referencia); dos conversores Java muy parecidos. 
-	* Desventaja: muchos triples se duplican: en el caso de recursos da igual, en el caso de literales no (si se hace una consulta al default graph, los rdfs:comment duplicados saldrán dos veces).
+2. Dos grafos idénticos con solo diferencia en `Lanpostua`/`Cargo`. 
+	* Ventajas: el cargo puede ser un recurso en vez de un literal: [URIs de referencia](#uris-de-referencia); dos conversores Java muy parecidos. 
+	* Desventaja: muchos triples se duplican: en el caso de recursos da igual, en el caso de literales no (si se hace una consulta al default graph, los `rdfs:comment` duplicados saldrán dos veces, aunque tengan exactamente el mismo contenido).
 3. El grafo ES contiene todo menos `Lanpostu`, y el grafo EU solo contiene `Lanpostu`. 
-	* Ventajas: el cargo puede ser un recurso en vez de un literal (Ver URIs de referencia); menos triples. 
-	* Desventaja: dos conversores Java, uno solo con las lo correspondiente a Lanpostu.
+	* Ventajas: el cargo puede ser un recurso en vez de un literal: : [URIs de referencia](#uris-de-referencia); menos triples. 
+	* Desventaja: dos conversores Java, uno solo con las lo correspondiente a `Lanpostu`.
 
 
-Relacionar cargos con entidades sería muy interesante pero ahora no se puede hacer, ya que los datos de cargos y de entidades no comparten nada en común, con lo que no se pueden crear URIs de entidades para enlazarlos (Ver URIs de referencia). Por ejemplo el cargo "Delegado de Álava, Kristau Eskola" no tiene una entidad enlazable, tan sólo "Kristau eskola". Esto realmente afecta a la calidad de consultas SPARQL que se pueden hacer. 
+Además relacionar cargos con entidades sería muy interesante pero ahora no se puede hacer, ya que los datos de cargos y de entidades no comparten nada en común, con lo que no se pueden crear URIs de entidades para enlazarlos: [URIs de referencia](#uris-de-referencia). Por ejemplo el cargo "Delegado de Álava, Kristau Eskola" no tiene una entidad enlazable en entidades, tan sólo "Kristau eskola". Esto realmente afecta a la calidad de consultas SPARQL que se pueden hacer. 
 
 
 [URIs de referencia](#uris-de-referencia)

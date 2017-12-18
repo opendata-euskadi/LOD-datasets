@@ -25,12 +25,17 @@ Las dos versiones son el mismo CSV, habiendo una columna para el cargo en Castel
 
 ## Problemas en los CSV (Baja calidad de los datos)
 
-La libreria que he usado para parsear los CSV es [Apache Commons CSV](https://commons.apache.org/proper/commons-csv/).
+La libreria que he usado para parsear los CSV es [Apache Commons CSV](https://commons.apache.org/proper/commons-csv/), y he asumido que los CSV tienen codificación UTF-8, que no sé si es el caso.
 
-Los CSV tienen bastantes problemas. El primero y más importante es que muchas líneas ni siquiera tienen el mismo número de celdas que se define en la cabecera, según el método [isConsistent](https://commons.apache.org/proper/commons-csv/apidocs/org/apache/commons/csv/CSVRecord.html#isConsistent--). 
+Los CSV tienen bastantes problemas:
 
-Mirar codigo
-Mirar LOG
+* Muchas líneas ni siquiera tienen el mismo número de celdas que se define en la cabecera, según el método [isConsistent](https://commons.apache.org/proper/commons-csv/apidocs/org/apache/commons/csv/CSVRecord.html#isConsistent--), tanto en cargos como en entidades. 
+* Cargos: Hay celdas de Nombre que tienen nombre y apellidos, y la celda Apellidos esta vacia (Ej. Azucena Martínez).
+* Cargos: Hay líneas que no tienen nombre, y entonces cuando accedemos a nombre aparece el cargo (¿Deberían ser detectadas como inconsistentes?).
+* Cargos: Euskera incorrecto: "Gipuzkoako Erizaintza Kolegio Oficiala".
+* Cargos: direcciones postales vacías, o con fatla de población o código postal.
+* Cargos: muchas direcciones web son inválidas.
+* En las entidades los errores son similares.
 
 ## Problemas/decisiones generales Linked Data
 
@@ -49,22 +54,35 @@ La idea original es que cada dataset en cada idioma (cada CSV) va a convertirse 
 	* Ventajas: el cargo puede ser un recurso en vez de un literal (Ver URIs de referencia); menos triples. 
 	* Desventaja: dos conversores Java, uno solo con las lo correspondiente a Lanpostu.
 
-Grafos entidades
 
-Relacionar cargos con entidades sería muy interesante pero ahora no se puede hacer
-Los datos de cargos y de entidades no comparten nada en comun, con lo que no se pueden crear URIs de entidades para enlazarlos (Ver URIs de referencia):
+Relacionar cargos con entidades sería muy interesante pero ahora no se puede hacer, ya que los datos de cargos y de entidades no comparten nada en común, con lo que no se pueden crear URIs de entidades para enlazarlos (Ver URIs de referencia). Por ejemplo el cargo "Delegado de Álava, Kristau Eskola" no tiene una entidad enlazable, tan sólo "Kristau eskola". Esto realmente afecta a la calidad de consultas SPARQL que se pueden hacer. 
 
-cargos: "Delegado de Álava, Kristau Eskola"
-entidad: "Kristau eskola"
-
-URIs de referencia a generar:
-* Cargos
+URIs de referencia a generar (el programa debería obtener esta URIs de una lista, en vez de generarlas):
+* Cargos.
+* Entidades.
+* Direcciones y poblaciones.
 
 ## DCAT
 
-He quitado la distribucion SPARQL y la TTL original, he añadido la de Linked Data y la de nquads:
+Al DCAT original le he quitado la distribucion SPARQL y la TTL, y he añadido una distribución Linked Data y otra nquads:
 
-prociones de DCAT
+```
+<http://es.euskadi.eus/distribution/guia-de-la-comunicacion-del-gobierno-vasco-datos-de-contacto-de-los-representantes-y-cargos-de-entidades>
+  a dcat:Distribution, void:Dataset ;
+  sd:namedGraph <http://es.euskadi.eus/graph/guia-comunicacion-cargos> ;
+  void:sparqlEndpoint <http://es.euskadi.eus/sparql/guia-de-la-comunicacion-del-gobierno-vasco-datos-de-contacto-de-los-representantes-y-cargos-de-entidades> .
+
+<http://es.euskadi.eus/distribution/open_data/gc_cargos_datos_completos.nquads>
+  a dcat:Distribution ;
+  dc:format [
+    a dc:IMT ;
+    rdfs:label "RDF-nquads" ;
+    rdf:value "application/n-quads"
+  ] ;
+  dcat:byteSize 0.0 ;
+  dcat:accessURL "http://gida.irekia.euskadi.eus/open_data/gc_cargos_datos_completos.nquads"^^xsd:anyURI ;
+  dc:title "Datos de contacto"@es .
+  ```
 
 ## Mecánica de transformación
 

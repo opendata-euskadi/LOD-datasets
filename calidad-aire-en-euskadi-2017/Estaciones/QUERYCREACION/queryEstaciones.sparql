@@ -1,0 +1,40 @@
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX spif: <http://spinrdf.org/spif#>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <http://schema.org/>
+INSERT{
+  graph<http://es.euskadi.eus/graph/estaciones>{
+?uriEstacion rdf:type schema:Place;
+      rdfs:label ?nomEsp;
+      geo:long ?longitud;
+      geo:lat ?latitud;
+      schema:address ?direccionEsp;
+      schema:addressLocality ?ciudadEsp;
+      schema:addressRegion ?provinciaEsp;
+}
+	}
+WHERE{
+  SERVICE<http://lod.eurohelp.es:7200/rdf-bridge/1759256716809>{
+     ?numRow a <urn:Row> ;
+     <urn:col:Name> ?nombreEstacion;
+     <urn:col:NameURL> ?nombreURL;
+     <urn:col:Province> ?provincia;
+     <urn:col:Town> ?ciudad;
+     <urn:col:Address> ?direccion;
+     <urn:col:Coordenates_X> ?coordenadasX;
+     <urn:col:Coordenates_Y> ?coordenadasY;
+     <urn:col:Latitude> ?latitud;
+     <urn:col:Longitude> ?longitud;
+
+     bind(iri(concat("http://es.euskadi.eus/id/environment/air-quality/meassurement-station/", spif:encodeURL(?nombreURL))) as ?uriEstacion)
+     bind(STRLANG(?nombreEstacion,"es") as ?nomEsp)
+     bind(STRLANG(?direccion,"es") as ?direccionEsp)
+     bind(STRLANG(?provincia,"es") as ?provinciaEsp)
+     bind(STRLANG(?ciudad,"es") as ?ciudadEsp)
+     bind(STRLANG(?descripcionEstacion,"es") as ?descripcionEsp)
+
+     }
+}

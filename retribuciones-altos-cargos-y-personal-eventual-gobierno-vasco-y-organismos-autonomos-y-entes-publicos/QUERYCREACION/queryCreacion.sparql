@@ -1,0 +1,71 @@
+PREFIX spif: <http://spinrdf.org/spif#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX pproc:<http://contsem.unizar.es/def/sector-publico/pproc#>
+PREFIX dbpedia: <http://dbpedia.org/ontology/>
+PREFIX schema:<http://schema.org/>
+PREFIX dcterms:<http://purl.org/dc/terms/>
+PREFIX frapo:<http://purl.org/cerif/frapo/>
+INSERT{
+  graph<http://opendata.euskadi.eus/catalogo/id/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos/>{
+  ?uriGeneral a frapo:EmploymentContract;
+  schema:employee ?uriEmployee;
+  dbpedia:occupation ?uriCargoPublico;
+  pproc:ContractEconomicConditions ?Retribuciones;
+  pproc:formalizedDate ?fechaInicioRelParseada;
+  pproc:actualEndDate ?fechaFinRelParseada;
+  ?uriIdDepPred ?Id_Dpto;
+  pproc:managingDepartment ?uriDepartamento;
+  ?uriIdOrganoPred ?Id_Organo;
+  ?uriOrganoPred ?uriOrgano;
+  ?uriIdCentroOrganicoPred ?Id_Centro_Organico;
+  ?uriCentroOrganicoPred  ?uriCentroOrganico;
+  dcterms:modified ?fechaActParseada; 
+  }
+}WHERE{
+     service <http://lod.eurohelp.es:7200/rdf-bridge/2018799849637> {
+     ?numRow a <urn:Row>;
+     <urn:col:NomAp> ?NomAp;
+     <urn:col:empleado> ?empleado;
+     <urn:col:CargoPublico> ?CargoPublico;
+     <urn:col:CargoPublicoSinGuion> ?cpub;
+     <urn:col:Retribuciones> ?Retribuciones;        
+     <urn:col:FechaInicioRelacion> ?FechaInicioRelacion;
+     <urn:col:FechaFinRelacion> ?FechaFinRelacion;        
+     <urn:col:Id_Dpto> ?Id_Dpto;
+     <urn:col:Departamento> ?Departamento;  
+     <urn:col:Id_Organo> ?Id_Organo;
+     <urn:col:Organo> ?Organo;        
+     <urn:col:OrganoConGuion> ?OrganoConGuion;        
+     <urn:col:Id_Centro_Organico> ?Id_Centro_Organico;        
+     <urn:col:CentroOrganico> ?CentroOrganico;
+     <urn:col:FechaActualizacion> ?FechaActualizacion
+  }
+  
+  #Uri predicados
+  bind(iri("http://euskadi.eus/def/public-sector/administration/contrato/cargo-publico") as ?uriCargoPublicoPred)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/contrato/id-organo") as ?uriIdOrganoPred)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/contrato/organo") as ?uriOrganoPred)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/contrato/id-centro-organico") as ?uriIdCentroOrganicoPred)
+  bind(iri("http://euskadi.eus/def/public-sector/administration/contrato/centro-organico") as ?uriCentroOrganicoPred)
+
+  #Parseo de las fechas
+  bind(spif:parseDate(?FechaInicioRelacion, "dd/MM/yyyy") as ?fechaInicioRelParseada)
+  bind(spif:parseDate(?FechaFinRelacion, "dd/MM/yyyy") as ?fechaFinRelParseada)
+  bind(spif:parseDate(?FechaActualizacion, "dd/MM/yyyy") as ?fechaActParseada)
+  
+  #Formato a los datos
+  bind(STRLANG(?cpub,"es") as ?uriCargoPublico)
+  bind(STRLANG(?Organo,"es") as ?uriOrgano)
+  bind(STRLANG(?CentroOrganico,"es") as ?uriCentroOrganico)
+  #Uri general
+  bind(iri(concat("http://es.euskadi.eus/id/public-sector/administration/contract/", spif:encodeURL(?CargoPublico), "-", spif:encodeURL(?empleado), "-", spif:encodeURL(?Departamento), "-", spif:encodeURL(?OrganoConGuion), "-",?fechaActParseada )) as ?uriGeneral)
+  #Uri departamento
+  bind(iri(concat("http://es.euskadi.eus/id/public-sector/administration/department/", spif:encodeURL(?Departamento))) as ?uriDepartamento)
+  #Uri empleado 
+  bind(iri(concat("http://es.euskadi.eus/id/public-sector/administration/employee/", spif:encodeURL(?empleado))) as ?uriEmployee)
+
+  #Label
+  bind(STRLANG(concat(spif:encodeURL(?CargoPublico), "-", spif:encodeURL(?empleado), "-", spif:encodeURL(?Departamento), "-", spif:encodeURL(?OrganoConGuion), "-",?fechaActParseada),"es") as ?labelElemento)
+
+  
+}

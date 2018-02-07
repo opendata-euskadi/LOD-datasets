@@ -1,0 +1,226 @@
+PREFIX spif: <http://spinrdf.org/spif#>
+PREFIX pproc:<http://contsem.unizar.es/def/sector-publico/pproc#>
+PREFIX pc:<http://purl.org/procurement/public-contracts#>
+PREFIX dcterms:<http://purl.org/dc/terms/>
+PREFIX dbpedia:<http://dbpedia.org/ontology/>
+PREFIX frapo:<http://purl.org/cerif/frapo/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+INSERT{
+graph<http://es.euskadi.eus/graph/registro-de-contratos-del-sector-publico-de-euskadi>{
+ ?uriGeneral a frapo:EmploymentContract;
+ rdfs:label ?labelElemento;
+ pproc:formalizedDate ?fechaFormalizacionParseada;
+ dbpedia:status ?uriEstadoContrato;
+ dcterms:description ?uriDescription;
+ ?uriTipoContratoGen ?uriTipoContrato;
+ pproc:managingDepartment ?uriDepartamento;
+ ?uriAnoContratoGen ?anoContrato;
+ ?uriContratoMenorGen ?uriContratoMenor;
+ ?uriPoderAdjudicadorGen ?uriPoderAdjudicador;
+ ?uriAmbitoGen ?ambito;
+ ?uriTipoAdminGen ?uriTipoAdministracion;
+ ?uriEntidadImpulsoraGen ?uriEntidadImpulsora;
+ ?uriOrganoContrGen ?uriOrganoContrat;
+ ?uriEntidadTramitadoraGen ?uriEntidadTramitadora;
+ ?uriMesaContratacionGen ?uriMesaContrato;
+ ?uriObjetoContratoGen ?uriObjetoContrato;
+ ?uriLugarEjGen ?uriLugarEjecucion;
+ ?uriNutsGen ?uriNUTS;
+ ?uriCodCPVGen ?uriCodCPV;
+ ?uriContraPorLotesGen ?uriContraPorLotes;
+ ?uriContraMixtoGen ?uriContratoMixto;
+ ?uriAcuerdoMarcoGen ?uriAcuerdoMarco;
+ ?uriContratatoCompGen ?uriContratoComplementario;
+ ?uriPublicidadGen ?uriPublicidad;
+ ?uriFechaPubDoueGen ?fechaPublicacionDOUEParseada;
+ ?uriFechaAdjudicacionGen ?fechaAdjudicacionParseada;
+ ?uriTramitacionGen ?uriTramitacion;
+ ?uriProcAdjGen ?uriProcedimiento;
+ ?uriCriteriosValorGen ?uriCriterioValoracion;
+ ?uriImporteLicitacionSinIVAGen ?importeLicitacionSinIVA;
+ ?uriImporteLicitacionConIVAGen ?importeLicitacionConIVA;
+ ?uriImporteAdjudicacionsinIVAGen ?importeAdjSinIva;
+ ?uriImporteAdjudicacionConIVAGen ?importeDeAdjudicacionConIVA;
+ ?uriIVAImporteAdjudicacionGen ?uriIVAdelImp;
+ ?uriPlazoEjecucionMesesGen ?plazoEjecucion;
+ ?uriCaracterPlurianualGen ?uriCaracterPlurianual;
+ ?uriAnualidadGen ?uriAnualidad;
+ ?uriAdjudicatarioGen ?uriAdjudicatario;   
+ ?uriModificacionObjetoGen ?uriModificacionObjeto;
+ ?uriContinuidadContratoGen ?uriContinuidadContrato;
+ ?uriIdentContrGen ?uriCodIdenContr;
+ pproc:ContractEconomicConditions ?importeDeAdjudicacion.
+  }
+}WHERE{
+    service <http://lod.eurohelp.es:7200/rdf-bridge/2330908749607> {
+     ?numRow a <urn:Row>;
+     <urn:col:EstadoContrato> ?estadoDeContrato;
+     <urn:col:ContratoMenor> ?contratoMenor;
+     <urn:col:ContratacionMixto> ?contratoMixto;
+     <urn:col:Ambito> ?ambito;
+     <urn:col:TipoContratoSinGuion> ?tipoContratoSinGuion;
+	 <urn:col:AnoDelContrato> ?anoContrato;
+     <urn:col:OrganoContratante> ?organoContratante;
+     <urn:col:PoderAdjudicador> ?poderAdjudicador;
+     <urn:col:EntidadImpulsora> ?entidadImpulsora;
+     <urn:col:EntidadImpulsoraSinGuion> ?entidadImpulsoraSinGuion;
+     <urn:col:EntidadTramitadora> ?entidadTramitadora;
+     <urn:col:MesaDeContratacion> ?mesaDeContratacion;
+     <urn:col:ObjetodelContrato> ?objetodelContrato;
+     <urn:col:CodigoIdentificadorDelContrato> ?codigoIdentificadorDelContrato;
+     <urn:col:LugarEjecucionPrincipalEnLaUnionEuropea> ?lugarEjecucionPrincipalEnLaUnionEuropea;
+     <urn:col:NUTS> ?nuts;
+     <urn:col:CodigoCPV> ?codigoCPV;
+     <urn:col:ContratacionPorLotes> ?contratPorLotes;
+     <urn:col:ContratacionMixto> ?contratMixto;
+     <urn:col:AcuerdoMarco> ?acuerdoMarco;
+	 <urn:col:Anualidad> ?anualidad;
+     <urn:col:ContratoComplementario> ?contratoComplemen;
+     <urn:col:Publicidad> ?publicidad;
+     <urn:col:FechaPublicacionEnElDOUE> ?fechaPublicacionDoue;
+     <urn:col:FechaPublicacionEnElPerfilDeContratante> ?fechaPublicacionPerfilContratante;
+     <urn:col:Tramitacion> ?tramitacion;
+     <urn:col:ProcedimientoDeAdjudicacion> ?procedimiento;
+     <urn:col:CriteriosDeValoracion> ?criteriosValoracion;
+	 <urn:col:ImporteDeLicitacionSinIVA> ?importeLicitacionSinIVA;
+     <urn:col:ImporteDeLicitacionConIVA> ?importeLicitacionConIVA;
+   	 <urn:col:CaracterPlurianual> ?caracterPlurianual;
+     <urn:col:RevisionDePreciosEstablecidos> ?revisionPreciosEstablecidos;
+     <urn:col:FechaDeAdjudicacion> ?fechaAdjudicacion;
+     <urn:col:ModificacionDelObjeto> ?modificacionDelObjeto;
+     <urn:col:ContinuidadDelContrato> ?continuedadDelContrato;
+     <urn:col:TitulodeContrato> ?titulo;
+     <urn:col:TipoDeContrato> ?tipoContrato;
+     <urn:col:Adjudicatario> ?adjudicatario;
+     <urn:col:ImporteDeAdjudicacionConIVA> ?importeDeAdjudicacionConIVA;
+     <urn:col:FechaDeFormalizacion> ?fechaFormalizacion;
+     } 
+     #Uri fecha
+  bind(spif:parseDate(?fechaFormalizacion, "dd/MM/yyyy") as ?fechaFormalizacionParseada)
+  bind(spif:parseDate(?fechaPublicacionPerfilContratante, "dd/MM/yyyy") as ?fechaPubPerfilContParseada)
+  bind(spif:parseDate(?fechaAdjudicacion, "dd/MM/yyyy") as ?fechaAdjudicacionParseada)
+  bind(spif:parseDate(?fechaPublicacionDoue, "dd/MM/yyyy") as ?fechaPublicacionDOUEParseada)
+  
+  #Uris general
+  bind(iri(concat("http://es.euskadi.eus/id/public-sector/administration/contract/", spif:encodeURL(?tipoContrato), "-", spif:encodeURL(?adjudicatario), "-",  ?fechaFormalizacionParseada )) as ?uriGeneral)
+ 
+  #Label
+  bind(STRLANG(concat(spif:encodeURL(?tipoContrato), "-", spif:encodeURL(?adjudicatario), "-",  ?fechaFormalizacionParseada),"es") as ?labelElemento)
+
+   #Uris objetos
+  bind(STRLANG(?estadoDeContrato,"es") as ?uriEstadoContrato)
+  bind(STRLANG(?titulo,"es") as ?uriDescription)
+  bind(STRLANG(?tipoContratoSinGuion,"es") as ?uriTipoContrato)
+  bind(STRLANG(?poderAdjudicador,"es") as ?uriPoderAdjudicador)
+  bind(STRLANG(?organoContratante,"es") as ?uriOrganoContrat)
+  bind(STRLANG(?entidadImpulsoraSinGuion,"es") as ?uriEntidadImpulsora)
+  bind(STRLANG(?entidadTramitadora,"es") as ?uriEntidadTramitadora)
+  ##
+  bind(STRLANG(?mesaDeContratacion,"es") as ?uriMesaContrato)
+  bind(STRLANG(?objetodelContrato,"es") as ?uriObjetoContrato)
+  bind(STRLANG(?codigoIdentificadorDelContrato,"es") as ?uriCodIdenContr)
+  bind(STRLANG(?lugarEjecucionPrincipalEnLaUnionEuropea,"es") as ?uriLugarEjecucion)
+  bind(STRLANG(?nuts,"es") as ?uriNUTS)
+  bind(STRLANG(?codigoCPV,"es") as ?uriCodCPV)
+  bind(STRLANG(?contratPorLotes,"es") as ?uriContraPorLotes)
+  bind(STRLANG(?contratoMenor,"es") as ?uriContratoMenor)
+  bind(STRLANG(?contratoMixto,"es") as ?uriContratoMixto)
+  bind(STRLANG(?acuerdoMarco,"es") as ?uriAcuerdoMarco)
+  bind(STRLANG(?contratoComplemen,"es") as ?uriContratoComplementario)
+  bind(STRLANG(?publicidad,"es") as ?uriPublicidad)
+  bind(STRLANG(?tramitacion,"es") as ?uriTramitacion)
+  bind(STRLANG(?procedimiento,"es") as ?uriProcedimiento)
+  bind(STRLANG(?criteriosValoracion,"es") as ?uriCriterioValoracion)
+  bind(STRLANG(?IVAImporteAdj,"es") as ?uriIVAdelImp)
+  bind(STRLANG(?caracterPlurianual,"es") as ?uriCaracterPlurianual)
+  bind(STRLANG(?anualidad,"es") as ?uriAnualidad)
+  bind(STRLANG(?adjudicatario,"es") as ?uriAdjudicatario)
+  bind(STRLANG(?modificacionDelObjeto,"es") as ?uriModificacionObjeto)
+  bind(STRLANG(?continuedadDelContrato,"es") as ?uriContinuidadContrato)
+  bind(STRLANG(?tipoAdministracion,"es") as ?uriTipoAdministracion)
+
+  #Uris predicados
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/poder-adjudicador") as ?uriPoderAdjudicadorGen)
+  
+  bind(iri(concat("http://es.euskadi.eus/id/public-sector/administration/department/", spif:encodeURL(?entidadImpulsora))) as ?uriDepartamento)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/codigo-contrato") as ?uricodigoContratoGen)
+
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/tipo-contrato") as ?uriTipoContratoGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/ano-contrato") as ?uriAnoContratoGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/contrato-menor") as ?uriContratoMenorGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/ambito") as ?uriAmbitoGen)
+
+  bind(iri("http://euskadi.eus/def/public-sector/administration/tipo-administracion") as ?uriTipoAdminGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/entidad-impulsora") as ?uriEntidadImpulsoraGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/organo-contratante") as ?uriOrganoContrGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/entidad-tramitadora") as ?uriEntidadTramitadoraGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/mesa-de-contratacion") as ?uriMesaContratacionGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/objeto-del-contrato") as ?uriObjetoContratoGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/cod-identificador-contrato") as ?uriIdentContrGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/lugar-ejecucion") as ?uriLugarEjGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/nuts") as ?uriNutsGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/codigo-cpv") as ?uriCodCPVGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/contratacion-por-lotes") as ?uriContraPorLotesGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/contratacion-mixto") as ?uriContraMixtoGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/acuerdo-marco") as ?uriAcuerdoMarcoGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/contrato-complementario") as ?uriContratatoCompGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/publicidad") as ?uriPublicidadGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/fecha-publicacion-en-el-DOUE") as ?uriFechaPubDoueGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/fecha-publicacion-en-perfil-contratante") as ?uriFechaPubPContGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/fecha-adjudicacion") as ?uriFechaAdjudicacionGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/tramitacion") as ?uriTramitacionGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/procedimiento-de-adjudicacion") as ?uriProcAdjGen)
+
+  bind(iri("http://euskadi.eus/def/public-sector/administration/criterios-de-valoracion") as ?uriCriteriosValorGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/importe-licitacion-sin-IVA") as ?uriImporteLicitacionSinIVAGen)
+
+  bind(iri("http://euskadi.eus/def/public-sector/administration/importe-licitacion-con-IVA") as ?uriImporteLicitacionConIVAGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/IVA-importe-licitacion") as ?uriIVAImporteLicitacionGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/importe-de-adjudicacion-sin-IVA") as ?uriImporteAdjudicacionsinIVAGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/importe-de-adjudicacion-con-IVA") as ?uriImporteAdjudicacionConIVAGen)
+
+  bind(iri("http://euskadi.eus/def/public-sector/administration/IVA-importe-adjudicacion") as ?uriIVAImporteAdjudicacionGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/plazo-ejecucion-meses") as ?uriPlazoEjecucionMesesGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/caracter-plurianual") as ?uriCaracterPlurianualGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/anualidad") as ?uriAnualidadGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/adjudicatario") as ?uriAdjudicatarioGen)
+  
+
+  bind(iri("http://euskadi.eus/def/public-sector/administration/modificacion-objeto") as ?uriModificacionObjetoGen)
+  
+  bind(iri("http://euskadi.eus/def/public-sector/administration/continuidad-contrato") as ?uriContinuidadContratoGen)
+	
+ }

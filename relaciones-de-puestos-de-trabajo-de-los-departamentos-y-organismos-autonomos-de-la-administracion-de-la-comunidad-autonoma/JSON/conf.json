@@ -1,0 +1,526 @@
+[
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Fecha Descarga to FechaDescarga",
+    "oldColumnName": "Fecha Descarga",
+    "newColumnName": "FechaDescarga"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Centro Destino to CentroDestino",
+    "oldColumnName": "Centro Destino",
+    "newColumnName": "CentroDestino"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Categoria Retributiva to CategoriaRetributiva",
+    "oldColumnName": "Categoria Retributiva",
+    "newColumnName": "CategoriaRetributiva"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Fecha de Preceptividad to FechaDePreceptividad",
+    "oldColumnName": "Fecha de Preceptividad",
+    "newColumnName": "FechaDePreceptividad"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Importe retributivo to ImporteRetributivo",
+    "oldColumnName": "Importe retributivo",
+    "newColumnName": "ImporteRetributivo"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestino using expression grel:value.replace(\" \",\"-\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestino",
+    "expression": "grel:value.replace(\" \",\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestino using expression grel:value.replace(\"--\",\"-\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestino",
+    "expression": "grel:value.replace(\"--\",\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestino using expression grel:value.replace(\"--\",\"-\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestino",
+    "expression": "grel:value.replace(\"--\",\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestino using expression grel:value.replace(\"Iï¿½N\",\"ION\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestino",
+    "expression": "grel:value.replace(\"Iï¿½N\",\"ION\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestino using expression grel:value.replace(\"ï¿½\",\"\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestino",
+    "expression": "grel:value.replace(\"ï¿½\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestino using expression grel:value.replace(\"ï¿½\",\"\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestino",
+    "expression": "grel:value.replace(\"ï¿½\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestino using expression grel:value.replace(\"/\",\"-\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestino",
+    "expression": "grel:value.replace(\"/\",\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestino using expression grel:value.replace(\".\",\"\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestino",
+    "expression": "grel:value.replace(\".\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestino using expression grel:value.replace(\",\",\"\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestino",
+    "expression": "grel:value.replace(\",\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column CentroDestinoSinGuion at index 11 based on column CentroDestino using expression grel:value.replace(\"-\",\" \")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "newColumnName": "CentroDestinoSinGuion",
+    "columnInsertIndex": 11,
+    "baseColumnName": "CentroDestino",
+    "expression": "grel:value.replace(\"-\",\" \")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Puesto using expression value.toLowercase()",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "Puesto",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestino using expression value.toLowercase()",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestino",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestinoSinGuion using expression value.toLowercase()",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestinoSinGuion",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestino using expression grel:value.replace(\" \",\"-\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestino",
+    "expression": "grel:value.replace(\" \",\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestino using expression grel:value.replace(\"--\",\"-\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestino",
+    "expression": "grel:value.replace(\"--\",\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestino using expression grel:value.replace(\"--\",\"-\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestino",
+    "expression": "grel:value.replace(\"--\",\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestino using expression grel:value.replace(\"Iï¿½N\",\"ION\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestino",
+    "expression": "grel:value.replace(\"Iï¿½N\",\"ION\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestino using expression grel:value.replace(\"ï¿½\",\"\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestino",
+    "expression": "grel:value.replace(\"ï¿½\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestino using expression grel:value.replace(\"ï¿½\",\"\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestino",
+    "expression": "grel:value.replace(\"ï¿½\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestino using expression grel:value.replace(\"/\",\"-\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestino",
+    "expression": "grel:value.replace(\"/\",\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestino using expression grel:value.replace(\".\",\"\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestino",
+    "expression": "grel:value.replace(\".\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestino using expression grel:value.replace(\",\",\"\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestino",
+    "expression": "grel:value.replace(\",\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Puesto using expression value.toLowercase()",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "Puesto",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestino using expression value.toLowercase()",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestino",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroDestinoSinGuion using expression value.toLowercase()",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "CentroDestinoSinGuion",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Cód. Centro Destino using expression value.toNumber()",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "Cód. Centro Destino",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column xSiaCa at index 16 based on column ImporteRetributivo using expression grel:value.replace(\".\",\"\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "newColumnName": "xSiaCa",
+    "columnInsertIndex": 16,
+    "baseColumnName": "ImporteRetributivo",
+    "expression": "grel:value.replace(\".\",\"\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column xSiaCa using expression grel:value.replace(\",\",\".\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "xSiaCa",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column xSiaCa using expression value.toNumber()",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "xSiaCa",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column ImporteRetributivo",
+    "columnName": "ImporteRetributivo"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column xSiaCa to ImporteRetributivo",
+    "oldColumnName": "xSiaCa",
+    "newColumnName": "ImporteRetributivo"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Dotación using expression value.toNumber()",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "Dotación",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Cód. Departamento-Organismo Autónomo using expression value.toNumber()",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "Cód. Departamento-Organismo Autónomo",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Cód. Centro Orgánico using expression value.toNumber()",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "columnName": "Cód. Centro Orgánico",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Fecha Modificación to FechaModificacion",
+    "oldColumnName": "Fecha Modificación",
+    "newColumnName": "FechaModificacion"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Dotación to Dotacion",
+    "oldColumnName": "Dotación",
+    "newColumnName": "Dotacion"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Departamento-Organismo Autónomo to Departamento",
+    "oldColumnName": "Departamento-Organismo Autónomo",
+    "newColumnName": "Departamento"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column DepartamentoConGuion at index 7 based on column Departamento using expression grel:value.replace(\" \",\"-\")",
+    "engineConfig": {
+      "mode": "record-based",
+      "facets": []
+    },
+    "newColumnName": "DepartamentoConGuion",
+    "columnInsertIndex": 7,
+    "baseColumnName": "Departamento",
+    "expression": "grel:value.replace(\" \",\"-\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Cód. Departamento-Organismo Autónomo to CodDepartamentoOrganismoAutonomo",
+    "oldColumnName": "Cód. Departamento-Organismo Autónomo",
+    "newColumnName": "CodDepartamentoOrganismoAutonomo"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Cód. Puesto to CodPuesto",
+    "oldColumnName": "Cód. Puesto",
+    "newColumnName": "CodPuesto"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Cód. Centro Orgánico to CodCentroOrganico",
+    "oldColumnName": "Cód. Centro Orgánico",
+    "newColumnName": "CodCentroOrganico"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Cód. Centro Destino to CodCentroDestino",
+    "oldColumnName": "Cód. Centro Destino",
+    "newColumnName": "CodCentroDestino"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Perfil Lingüístico to PerfilLinguistico",
+    "oldColumnName": "Perfil Lingüístico",
+    "newColumnName": "PerfilLinguistico"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Centro Orgánico to CentroOrganico",
+    "oldColumnName": "Centro Orgánico",
+    "newColumnName": "CentroOrganico"
+  }
+]

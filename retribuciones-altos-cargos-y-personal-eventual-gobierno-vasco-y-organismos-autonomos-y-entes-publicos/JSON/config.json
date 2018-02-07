@@ -1,0 +1,1205 @@
+[
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Retribuciones 2014\nRetribuciones 2015 using expression grel:value.replace(\" �\",\"\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Retribuciones 2014\nRetribuciones 2015",
+    "expression": "grel:value.replace(\" �\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-split",
+    "description": "Split column Departamento by separator",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Departamento",
+    "guessCellType": true,
+    "removeOriginalColumn": true,
+    "mode": "separator",
+    "separator": "- ",
+    "regex": false,
+    "maxColumns": 0
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column Departamento 1",
+    "columnName": "Departamento 1"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Departamento 2 using expression grel:value.replace(\"N�\",\"NO\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Departamento 2",
+    "expression": "grel:value.replace(\"N�\",\"NO\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Departamento 2 using expression grel:value.replace(\"L�\",\"LI\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Departamento 2",
+    "expression": "grel:value.replace(\"L�\",\"LI\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Departamento 2 using expression grel:value.replace(\"I�N\",\"ION\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Departamento 2",
+    "expression": "grel:value.replace(\"I�N\",\"ION\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Departamento 2 using expression grel:value.replace(\"P�\",\"PU\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Departamento 2",
+    "expression": "grel:value.replace(\"P�\",\"PU\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Cargo P�blico using expression grel:value.replace(\"/A\",\"\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Cargo P�blico",
+    "expression": "grel:value.replace(\"/A\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Cargo P�blico using expression grel:value.replace(\" \",\"-\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Cargo P�blico",
+    "expression": "grel:value.replace(\" \",\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Departamento 2 using expression grel:value.replace(\" \",\"-\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Departamento 2",
+    "expression": "grel:value.replace(\" \",\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Departamento 2 using expression grel:value.replace(\"G��S\",\"GUIS\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Departamento 2",
+    "expression": "grel:value.replace(\"G��S\",\"GUIS\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Departamento 2 using expression grel:value.replace(\".\",\"\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Departamento 2",
+    "expression": "grel:value.replace(\".\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Departamento 2 using expression grel:value.replace(\",\",\"\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Departamento 2",
+    "expression": "grel:value.replace(\",\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Departamento 2 using expression grel:value.replace(\"/\",\"-\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Departamento 2",
+    "expression": "grel:value.replace(\"/\",\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Cargo P�blico using expression grel:value.replace(\".\",\"\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Cargo P�blico",
+    "expression": "grel:value.replace(\".\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Cargo P�blico using expression grel:value.replace(\",\",\"\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Cargo P�blico",
+    "expression": "grel:value.replace(\",\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Cargo P�blico using expression grel:value.replace(\"/\",\"-\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Cargo P�blico",
+    "expression": "grel:value.replace(\"/\",\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Apellidos, Nombre to NomAp",
+    "oldColumnName": "Apellidos, Nombre",
+    "newColumnName": "NomAp"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Cargo P�blico to CargoPublico",
+    "oldColumnName": "Cargo P�blico",
+    "newColumnName": "CargoPublico"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Fecha Inicio Relaci�n to FechaInicioRelacion",
+    "oldColumnName": "Fecha Inicio Relaci�n",
+    "newColumnName": "FechaInicioRelacion"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Fecha Fin Relaci�n to FechaFinRelacion",
+    "oldColumnName": "Fecha Fin Relaci�n",
+    "newColumnName": "FechaFinRelacion"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Departamento 2 to Departamento",
+    "oldColumnName": "Departamento 2",
+    "newColumnName": "Departamento"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column �rgano to Organo",
+    "oldColumnName": "�rgano",
+    "newColumnName": "Organo"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Centro Org�nico to CentroOrganico",
+    "oldColumnName": "Centro Org�nico",
+    "newColumnName": "CentroOrganico"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Fecha Actualizaci�n to FechaActualizacion",
+    "oldColumnName": "Fecha Actualizaci�n",
+    "newColumnName": "FechaActualizacion"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column Retribuciones 2014\nRetribuciones 2015 to RetribucioneS",
+    "oldColumnName": "Retribuciones 2014\nRetribuciones 2015",
+    "newColumnName": "RetribucioneS"
+  },
+  {
+    "op": "core/column-rename",
+    "description": "Rename column RetribucioneS to Retribuciones",
+    "oldColumnName": "RetribucioneS",
+    "newColumnName": "Retribuciones"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Retribuciones using expression grel:value.replace(\".\",\"\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Retribuciones",
+    "expression": "grel:value.replace(\".\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Retribuciones using expression grel:value.replace(\",\",\".\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Retribuciones",
+    "expression": "grel:value.replace(\",\",\".\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"N�MI\",\"NOMI\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"N�MI\",\"NOMI\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"MED�\",\"MEDI\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"MED�\",\"MEDI\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"R�A\",\"RIA\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"R�A\",\"RIA\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"D�S\",\"DIS\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"D�S\",\"DIS\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"G�A\",\"GIA\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"G�A\",\"GIA\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"�REA\",\"AREA\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"�REA\",\"AREA\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"C�ON\",\"CION\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"C�ON\",\"CION\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"ME�DI\",\"MEDI\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"ME�DI\",\"MEDI\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"M�DI\",\"MEDI\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"M�DI\",\"MEDI\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"C�ON\",\"CION\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"C�ON\",\"CION\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"CI�N\",\"CION\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"CI�N\",\"CION\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"V�C\",\"VIC\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"V�C\",\"VIC\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"AN�L\",\"ANAL\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"AN�L\",\"ANAL\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"P�B\",\"PUB\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"P�B\",\"PUB\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"JUR�\",\"JURI\")\nvalue.replace(\"SI�N\",\"SION\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"JUR�\",\"JURI\")\nvalue.replace(\"SI�N\",\"SION\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"SI�N\",\"SION\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"SI�N\",\"SION\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"POL�\",\"POLI\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"POL�\",\"POLI\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column DeptoSinGuion at index 7 based on column Departamento using expression grel:value.replace(\"-\",\" \")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "DeptoSinGuion",
+    "columnInsertIndex": 7,
+    "baseColumnName": "Departamento",
+    "expression": "grel:value.replace(\"-\",\" \")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column CargoPublicoSinGuion at index 2 based on column CargoPublico using expression grel:value.replace(\"-\",\" \")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "CargoPublicoSinGuion",
+    "columnInsertIndex": 2,
+    "baseColumnName": "CargoPublico",
+    "expression": "grel:value.replace(\"-\",\" \")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/column-removal",
+    "description": "Remove column DeptoSinGuion",
+    "columnName": "DeptoSinGuion"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroOrganico using expression grel:value.replace(\"R�A\",\"RIA\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CentroOrganico",
+    "expression": "grel:value.replace(\"R�A\",\"RIA\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroOrganico using expression grel:value.replace(\"I�N\",\"ION\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CentroOrganico",
+    "expression": "grel:value.replace(\"I�N\",\"ION\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroOrganico using expression value.toUppercase()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CentroOrganico",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroOrganico using expression grel:value.replace(\"I�N\",\"ION\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CentroOrganico",
+    "expression": "grel:value.replace(\"I�N\",\"ION\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroOrganico using expression grel:value.replace(\"P�\",\"PU\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CentroOrganico",
+    "expression": "grel:value.replace(\"P�\",\"PU\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroOrganico using expression grel:value.replace(\"R�G\",\"REG\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CentroOrganico",
+    "expression": "grel:value.replace(\"R�G\",\"REG\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroOrganico using expression grel:value.replace(\"R�D\",\"RID\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CentroOrganico",
+    "expression": "grel:value.replace(\"R�D\",\"RID\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroOrganico using expression grel:value.replace(\"G�A\",\"GIA\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CentroOrganico",
+    "expression": "grel:value.replace(\"G�A\",\"GIA\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroOrganico using expression grel:value.replace(\"POL�\",\"POLI\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CentroOrganico",
+    "expression": "grel:value.replace(\"POL�\",\"POLI\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroOrganico using expression grel:value.replace(\"T�FI\",\"TIFI\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CentroOrganico",
+    "expression": "grel:value.replace(\"T�FI\",\"TIFI\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroOrganico using expression grel:value.replace(\"M�A\",\"MIA\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CentroOrganico",
+    "expression": "grel:value.replace(\"M�A\",\"MIA\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"/\",\"\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"/\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\",\",\"\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\",\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\".\",\"\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\".\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"�\",\"\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"�\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\" \",\"-\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\" \",\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"�\",\"\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"�\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\".\",\"\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\".\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\"/\",\"\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\"/\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression grel:value.replace(\",\",\"\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "grel:value.replace(\",\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublico using expression value.toLowercase()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublico",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column NomAp using expression value.toLowercase()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "NomAp",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Departamento using expression value.toLowercase()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Departamento",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CentroOrganico using expression value.toLowercase()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CentroOrganico",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Departamento using expression value.toLowercase()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Departamento",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column CargoPublicoSinGuion using expression value.toLowercase()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "CargoPublicoSinGuion",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Organo using expression value.toLowercase()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Organo",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column empleado at index 1 based on column NomAp using expression grel:value.replace(\",\",\"-\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "empleado",
+    "columnInsertIndex": 1,
+    "baseColumnName": "NomAp",
+    "expression": "grel:value.replace(\",\",\"-\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column empleado using expression grel:value.replace(\" \",\"-\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "empleado",
+    "expression": "grel:value.replace(\" \",\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column empleado using expression grel:value.replace(\"--\",\"-\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "empleado",
+    "expression": "grel:value.replace(\"--\",\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Organo using expression grel:value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Organo",
+    "expression": "grel:value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Organo using expression value.toUppercase()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Organo",
+    "expression": "value.toUppercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Organo using expression grel:value.replace(\"P�\",\"PU\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Organo",
+    "expression": "grel:value.replace(\"P�\",\"PU\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Organo using expression grel:value.replace(\"G��S\",\"GUIS\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Organo",
+    "expression": "grel:value.replace(\"G��S\",\"GUIS\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Organo using expression grel:value",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Organo",
+    "expression": "grel:value",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Organo using expression grel:value.replace(\"R�A\",\"RIA\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Organo",
+    "expression": "grel:value.replace(\"R�A\",\"RIA\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Organo using expression grel:value.replace(\"AN�L\",\"ANAL\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Organo",
+    "expression": "grel:value.replace(\"AN�L\",\"ANAL\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Organo using expression grel:value.replace(\"�N\",\"on\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Organo",
+    "expression": "grel:value.replace(\"�N\",\"on\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Organo using expression grel:value.replace(\"N�MI\",\"NOMI\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Organo",
+    "expression": "grel:value.replace(\"N�MI\",\"NOMI\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Organo using expression grel:value.replace(\"I�N\",\"ION\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Organo",
+    "expression": "grel:value.replace(\"I�N\",\"ION\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Organo using expression grel:value.replace(\"L�TICAS\", \"LITICAS\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Organo",
+    "expression": "grel:value.replace(\"L�TICAS\", \"LITICAS\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column Organo using expression value.toLowercase()",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "Organo",
+    "expression": "value.toLowercase()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/column-addition",
+    "description": "Create column OrganoConGuion at index 11 based on column Organo using expression grel:value.replace(\" \",\"-\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "newColumnName": "OrganoConGuion",
+    "columnInsertIndex": 11,
+    "baseColumnName": "Organo",
+    "expression": "grel:value.replace(\" \",\"-\")",
+    "onError": "set-to-blank"
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column NomAp using expression grel:value.replace(\"i�igo\", \"inigo\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "NomAp",
+    "expression": "grel:value.replace(\"i�igo\", \"inigo\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column empleado using expression grel:value.replace(\"i�igo\", \"inigo\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "empleado",
+    "expression": "grel:value.replace(\"i�igo\", \"inigo\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column OrganoConGuion using expression grel:value.replace(\"---\",\"-\"",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "OrganoConGuion",
+    "expression": "grel:value.replace(\"---\",\"-\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column OrganoConGuion using expression grel:value.replace(\"---\",\"-\"",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "OrganoConGuion",
+    "expression": "grel:value.replace(\"---\",\"-\"",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column OrganoConGuion using expression grel:value.replace(\".\",\"\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "OrganoConGuion",
+    "expression": "grel:value.replace(\".\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column OrganoConGuion using expression grel:value.replace(\",\",\"\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "OrganoConGuion",
+    "expression": "grel:value.replace(\",\",\"\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  },
+  {
+    "op": "core/text-transform",
+    "description": "Text transform on cells in column OrganoConGuion using expression grel:value.replace(\"---\",\"-\")",
+    "engineConfig": {
+      "mode": "row-based",
+      "facets": []
+    },
+    "columnName": "OrganoConGuion",
+    "expression": "grel:value.replace(\"---\",\"-\")",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10
+  }
+]

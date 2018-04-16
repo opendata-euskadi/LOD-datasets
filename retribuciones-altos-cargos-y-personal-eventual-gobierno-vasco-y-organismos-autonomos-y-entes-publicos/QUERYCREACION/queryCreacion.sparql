@@ -6,7 +6,7 @@ PREFIX schema:<http://schema.org/>
 PREFIX dcterms:<http://purl.org/dc/terms/>
 PREFIX frapo:<http://purl.org/cerif/frapo/>
 INSERT{
-  graph<http://opendata.euskadi.eus/catalogo/id/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos/>{
+  GRAPH<http://euskadi.eus/graph/retribuciones-altos-cargos-y-personal-eventual-gobierno-vasco-y-organismos-autonomos-y-entes-publicos/>{
   ?uriGeneral a frapo:EmploymentContract;
   schema:employee ?uriEmployee;
   dbpedia:occupation ?uriCargoPublico;
@@ -22,7 +22,7 @@ INSERT{
   dcterms:modified ?fechaActParseada; 
   }
 }WHERE{
-     service <http://lod.eurohelp.es:7200/rdf-bridge/2018799849637> {
+  SERVICE<http://lod.eurohelp.es:7200/rdf-bridge/2050115139828>{
      ?numRow a <urn:Row>;
      <urn:col:NomAp> ?NomAp;
      <urn:col:empleado> ?empleado;
@@ -39,9 +39,9 @@ INSERT{
      <urn:col:Id_Centro_Organico> ?Id_Centro_Organico;        
      <urn:col:CentroOrganico> ?CentroOrganico;
      <urn:col:FechaActualizacion> ?FechaActualizacion
-  }
   
-  #Uri predicados
+  }
+#Uri predicados
   bind(iri("http://euskadi.eus/def/public-sector/administration/contrato/cargo-publico") as ?uriCargoPublicoPred)
   bind(iri("http://euskadi.eus/def/public-sector/administration/contrato/id-organo") as ?uriIdOrganoPred)
   bind(iri("http://euskadi.eus/def/public-sector/administration/contrato/organo") as ?uriOrganoPred)
@@ -58,14 +58,15 @@ INSERT{
   bind(STRLANG(?Organo,"es") as ?uriOrgano)
   bind(STRLANG(?CentroOrganico,"es") as ?uriCentroOrganico)
   #Uri general
-  bind(iri(concat("http://es.euskadi.eus/id/public-sector/administration/contract/", spif:encodeURL(?CargoPublico), "-", spif:encodeURL(?empleado), "-", spif:encodeURL(?Departamento), "-", spif:encodeURL(?OrganoConGuion), "-",?fechaActParseada )) as ?uriGeneral)
+  bind(iri(concat("http://euskadi.eus/id/public-sector/administration/contract/", spif:encodeURL(?CargoPublico), "-", spif:encodeURL(?empleado), "-", spif:encodeURL(?Departamento), "-", spif:encodeURL(?OrganoConGuion), "-",?fechaActParseada )) as ?uriGeneral)
   #Uri departamento
-  bind(iri(concat("http://es.euskadi.eus/id/public-sector/administration/department/", spif:encodeURL(?Departamento))) as ?uriDepartamento)
+  bind(iri(concat("http://euskadi.eus/id/public-sector/administration/department/", spif:encodeURL(?Departamento))) as ?uriDepartamento)
   #Uri empleado 
-  bind(iri(concat("http://es.euskadi.eus/id/public-sector/administration/employee/", spif:encodeURL(?empleado))) as ?uriEmployee)
+  bind(iri(concat("http://euskadi.eus/id/public-sector/administration/employee/", spif:encodeURL(?empleado))) as ?uriEmployee)
 
   #Label
   bind(STRLANG(concat(spif:encodeURL(?CargoPublico), "-", spif:encodeURL(?empleado), "-", spif:encodeURL(?Departamento), "-", spif:encodeURL(?OrganoConGuion), "-",?fechaActParseada),"es") as ?labelElemento)
 
+  
   
 }

@@ -4,27 +4,30 @@ PREFIX pproc:<http://contsem.unizar.es/def/sector-publico/pproc#>
 PREFIX pc: <http://purl.org/procurement/public-contracts#>
 PREFIX frapo:<http://purl.org/cerif/frapo/>
 PREFIX dcterms:<http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 INSERT{
-graph<http://es.euskadi.eus/graph/relaciones-de-puestos-de-trabajo-de-los-departamentos-y-organismos-autonomos-de-la-administracion-de-la-comunidad-autonoma>{
-	?uriGeneral a frapo:EmploymentContract;
-	rdfs:label ?labelElemento;
-	dcterms:modified ?fechaModificacionParseada;
-	?uriFechaDescarga ?fechaDescargaParseada;  
-	?uriCodPuesto ?codPuesto;
-	?uriDotacion ?dotacion;
-	dbpedia:occupation ?uriPuestoId;
-	?uriCodDpto ?codDepartamento;
-	pproc:managingDepartment ?uriDepartamento;
-	?uriCodCentroOrganico ?codCentroOrganico;
-	?uriCentroOrganico ?uriCentroOrganicoId;
-	?uriCodCentroDestino ?uriCentroDestinoId;
-	?uriCategoriaRetributiva ?categoriaRetributiva;
-	?uriPerfilLinguistico ?perfilLinguistico;
-	pproc:formalizedDate ?fechaPreceptividadParseada;
-	pproc:ContractEconomicConditions ?importeRetributivo;
+graph<http://euskadi.eus/graph/relaciones-de-puestos-de-trabajo-de-los-departamentos-y-organismos-autonomos-de-la-administracion-de-la-comunidad-autonoma>
+{
+    
+    ?uriGeneral a frapo:EmploymentContract;
+    rdfs:label ?labelElemento;
+    dcterms:modified ?fechaModificacionParseada;
+    ?uriFechaDescarga ?fechaDescargaParseada;  
+    ?uriCodPuesto ?codPuesto;
+    ?uriDotacion ?dotacion;
+    dbpedia:occupation ?uriPuestoId;
+    ?uriCodDpto ?codDepartamento;
+    pproc:managingDepartment ?uriDepartamento;
+    ?uriCodCentroOrganico ?codCentroOrganico;
+    ?uriCentroOrganico ?uriCentroOrganicoId;
+    ?uriCodCentroDestino ?uriCentroDestinoId;
+    ?uriCategoriaRetributiva ?categoriaRetributiva;
+    ?uriPerfilLinguistico ?perfilLinguistico;
+    pproc:formalizedDate ?fechaPreceptividadParseada;
+    pproc:ContractEconomicConditions ?importeRetributivo;
     }
 }WHERE{
-   service <http://lod.eurohelp.es:7200/rdf-bridge/1686915770162> {
+SERVICE<http://lod.eurohelp.es:7200/rdf-bridge/1803822894143>{
      ?numRow a <urn:Row>;
      <urn:col:FechaModificacion> ?fechaModificacion;
      <urn:col:FechaDescarga> ?fechaDescarga;
@@ -44,14 +47,14 @@ graph<http://es.euskadi.eus/graph/relaciones-de-puestos-de-trabajo-de-los-depart
      <urn:col:FechaDePreceptividad> ?fechaDePreceptividad;
      <urn:col:ImporteRetributivo> ?importeRetributivo;    
   }
-  
+
     #Uri fecha
   bind(spif:parseDate(?fechaModificacion, "dd/MM/yyyy") as ?fechaModificacionParseada)
   bind(spif:parseDate(?fechaDescarga, "dd/MM/yyyy") as ?fechaDescargaParseada)
   bind(spif:parseDate(?fechaDePreceptividad, "dd/MM/yyyy") as ?fechaPreceptividadParseada)
 
   #Uri general
-  bind(iri(concat("http://es.euskadi.eus/id/public-sector/administration/contract/", spif:encodeURL(?dotacion), "-", spif:encodeURL(?centroDestino),"-", spif:encodeURL(?codPuesto), "-", ?fechaModificacionParseada )) as ?uriGeneral)
+  bind(iri(concat("http://euskadi.eus/id/public-sector/administration/contract/", spif:encodeURL(?dotacion), "-", spif:encodeURL(?centroDestino),"-", spif:encodeURL(?codPuesto), "-", ?fechaModificacionParseada )) as ?uriGeneral)
   
   #Label 
   bind(STRLANG(concat(spif:encodeURL(?dotacion), "-", spif:encodeURL(?centroDestino),"-", spif:encodeURL(?codPuesto), "-", ?fechaModificacionParseada),"es") as ?labelElemento)
@@ -76,6 +79,6 @@ graph<http://es.euskadi.eus/graph/relaciones-de-puestos-de-trabajo-de-los-depart
   bind(STRLANG(?codCentroDestinoSinGuion,"es") as ?uriCentroDestinoId)
 
   #Uri dpto
-  bind(iri(concat("http://es.euskadi.eus/id/public-sector/administration/department/", spif:encodeURL(?departamentoGuion))) as ?uriDepartamento)
+  bind(iri(concat("http://euskadi.eus/id/public-sector/administration/department/", spif:encodeURL(?departamentoGuion))) as ?uriDepartamento)
 
 }

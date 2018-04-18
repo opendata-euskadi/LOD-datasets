@@ -2,7 +2,6 @@ Datos de la guia de la comunicacion irekia en RDF
 =================================================
 
 
-
 ## Introducción
 
 En este repositorio se encuentran los datos de la [guía de la comunicación abierta](http://gida.irekia.euskadi.eus/) transformados a RDF. La transformación se ha hecho mediante un plugin desarrollado para la plataforma [ALDAPA](https://github.com/mikel-egana-aranguren/ALDAPA/tree/feature-rml.io/plugins/src/main/java/es/eurohelp/lod/aldapa/impl/transformation/guiacomunicacion). Durante el proceso de transformación me he encontrado con muchos problemas que sin duda nos encontraremos con otros datasets.
@@ -43,22 +42,9 @@ Los CSV tienen bastantes problemas:
 
 El dataset RDF publicado en Open Data Euskadi usaba una versión antigua de la ontologia [VCARD](https://www.w3.org/TR/vcard-rdf/), yo me estoy basando en la última versión, que es muy diferente. 
 
-La idea original es que cada dataset en cada idioma (cada CSV) va a convertirse en un grafo con su DCAT correspondiente dentro de la Triple Store. Sin embargo, en este caso los dos CSVs son idénticos, teniendo algunas columnas que se desglosan en columnas por idiomas (`Entidad`/`Erakundea`;`Cargo`/`Lanpostua`). Tomando el CSV de cargos como ejemplo, hay tres opciones:
+Los dos CSVs son idénticos, teniendo algunas columnas que se desglosan en columnas por idiomas (`Entidad`/`Erakundea`;`Cargo`/`Lanpostua`), de modo que se creará una sola URI por cada recurso y se usarán datatypes de idioma para los literales.
 
-1. Un único grafo con dos valores diferentes en `vcard:role`, uno para cada idioma (`@es`, `@eu`). 
-	* Ventaja: un solo conversor Java. 
-	* Desventajas: el cargo tiene que ser un literal en vez de un recurso: [URIs de referencia](#uris-de-referencia); el dataset EU no se convierte.
-
-2. Dos grafos idénticos con solo diferencia en `Lanpostua`/`Cargo`. 
-	* Ventajas: el cargo puede ser un recurso en vez de un literal: [URIs de referencia](#uris-de-referencia); dos conversores Java muy parecidos. 
-	* Desventaja: muchos triples se duplican: en el caso de recursos da igual, en el caso de literales no (si se hace una consulta al default graph, los `rdfs:comment` duplicados saldrán dos veces, aunque tengan exactamente el mismo contenido).
-3. El grafo ES contiene todo menos `Lanpostu`, y el grafo EU solo contiene `Lanpostu`. 
-	* Ventajas: el cargo puede ser un recurso en vez de un literal: : [URIs de referencia](#uris-de-referencia); menos triples. 
-	* Desventaja: dos conversores Java, uno solo con las lo correspondiente a `Lanpostu`.
-
-
-Además relacionar cargos con entidades sería muy interesante pero ahora no se puede hacer, ya que los datos de cargos y de entidades no comparten nada en común, con lo que no se pueden crear URIs de entidades para enlazarlos: [URIs de referencia](#uris-de-referencia). Por ejemplo el cargo "Delegado de Álava, Kristau Eskola" no tiene una entidad enlazable en entidades, tan sólo "Kristau eskola". Esto realmente afecta a la calidad de consultas SPARQL que se pueden hacer. 
-
+Relacionar cargos con entidades sería muy interesante pero ahora no se puede hacer, ya que los datos de cargos y de entidades no comparten nada en común, con lo que no se pueden crear URIs de entidades para enlazarlos: [URIs de referencia](#uris-de-referencia). Por ejemplo el cargo "Delegado de Álava, Kristau Eskola" no tiene una entidad enlazable en entidades, tan sólo "Kristau eskola". Esto realmente afecta a la calidad de consultas SPARQL que se pueden hacer. 
 
 [URIs de referencia](#uris-de-referencia)
 
@@ -74,22 +60,35 @@ URIs de referencia a generar (el programa debería obtener esta URIs de una list
 Al DCAT original le he quitado la distribucion SPARQL y la TTL, y he añadido una distribución Linked Data y otra nquads:
 
 ```
-<http://es.euskadi.eus/distribution/guia-de-la-comunicacion-del-gobierno-vasco-datos-de-contacto-de-los-representantes-y-cargos-de-entidades>
-  a dcat:Distribution, void:Dataset ;
-  sd:namedGraph <http://es.euskadi.eus/graph/guia-comunicacion-cargos> ;
-  void:sparqlEndpoint <http://es.euskadi.eus/sparql/guia-de-la-comunicacion-del-gobierno-vasco-datos-de-contacto-de-los-representantes-y-cargos-de-entidades> .
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:dcat="http://www.w3.org/ns/dcat#"
+         xmlns:sd="http://www.w3.org/ns/sparql-service-description#"
+         xmlns:void="http://rdfs.org/ns/void#"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
 
-<http://es.euskadi.eus/distribution/open_data/gc_cargos_datos_completos.nquads>
-  a dcat:Distribution ;
-  dc:format [
-    a dc:IMT ;
-    rdfs:label "RDF-nquads" ;
-    rdf:value "application/n-quads"
-  ] ;
-  dcat:byteSize 0.0 ;
-  dcat:accessURL "http://gida.irekia.euskadi.eus/open_data/gc_cargos_datos_completos.nquads"^^xsd:anyURI ;
-  dc:title "Datos de contacto"@es .
-  ```
+  <dcat:Distribution rdf:about="http://data.euskadi.eus/distribution/guia-de-la-comunicacion-del-gobierno-vasco-datos-de-contacto-de-los-representantes-y-cargos-de-entidades/lod">
+    <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+    <sd:namedGraph rdf:resource="http://data.euskadi.eus/graph/guia-de-la-comunicacion-del-gobierno-vasco-datos-de-contacto-de-los-representantes-y-cargos-de-entidades"/>
+    <void:sparqlEndpoint rdf:resource="http://data.euskadi.eus/sparql"/>
+  </dcat:Distribution>
+
+  <dcat:Distribution rdf:about="http://data.euskadi.eus/distribution/guia-de-la-comunicacion-del-gobierno-vasco-datos-de-contacto-de-los-representantes-y-cargos-de-entidades/nquads">
+    <dc:format>
+      <dc:IMT>
+        <rdfs:label>RDF-nquads</rdfs:label>
+        <rdf:value>application/n-quads</rdf:value>
+      </dc:IMT>
+    </dc:format>
+
+    <dcat:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</dcat:byteSize>
+    <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://gida.irekia.euskadi.eus/open_data/gc_cargos_datos_completos.nquads</dcat:accessURL>
+    <dc:title xml:lang="es">Datos de contacto</dc:title>
+  </dcat:Distribution>
+
+</rdf:RDF>
+```
 
 ## Mecánica de transformación
 

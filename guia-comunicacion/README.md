@@ -42,9 +42,7 @@ Los CSV tienen bastantes problemas:
 
 El dataset RDF publicado en Open Data Euskadi usaba una versión antigua de la ontologia [VCARD](https://www.w3.org/TR/vcard-rdf/), yo me estoy basando en la última versión, que es muy diferente. 
 
-Los dos CSVs son idénticos, teniendo algunas columnas que se desglosan en columnas por idiomas (`Entidad`/`Erakundea`;`Cargo`/`Lanpostua`), de modo que se creará una sola URI por cada recurso y se usarán datatypes de idioma para los literales.
-
-Relacionar cargos con entidades sería muy interesante pero ahora no se puede hacer, ya que los datos de cargos y de entidades no comparten nada en común, con lo que no se pueden crear URIs de entidades para enlazarlos: [URIs de referencia](#uris-de-referencia). Por ejemplo el cargo "Delegado de Álava, Kristau Eskola" no tiene una entidad enlazable en entidades, tan sólo "Kristau eskola". Esto realmente afecta a la calidad de consultas SPARQL que se pueden hacer. 
+Los dos CSVs son idénticos, teniendo algunas columnas que se desglosan en columnas por idiomas (`Entidad`/`Erakundea`;`Cargo`/`Lanpostua`), de modo que en principio se creará una sola URI por cada recurso y se usarán datatypes de idioma para los literales. Sin embargo, en vez de usar literales sería más interesante relacionar cargos con entidades pero ahora no se puede hacer, ya que los datos de cargos y de entidades no comparten nada en común, con lo que no se pueden crear URIs de entidades para enlazarlos: [URIs de referencia](#uris-de-referencia). Por ejemplo el cargo "Delegado de Álava, Kristau Eskola" no tiene una entidad enlazable en entidades, tan sólo "Kristau eskola". Esto realmente afecta a la calidad de consultas SPARQL que se pueden hacer. 
 
 [URIs de referencia](#uris-de-referencia)
 
@@ -86,7 +84,6 @@ Al DCAT original le he quitado la distribucion SPARQL y la TTL, y he añadido un
     <dcat:accessURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://gida.irekia.euskadi.eus/open_data/gc_cargos_datos_completos.nquads</dcat:accessURL>
     <dc:title xml:lang="es">Datos de contacto</dc:title>
   </dcat:Distribution>
-
 </rdf:RDF>
 ```
 

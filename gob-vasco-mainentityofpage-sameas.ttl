@@ -1,0 +1,8 @@
+PREFIX schema: <http://schema.org/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+# http://opendata.aragon.es/def/Aragopedia#ComunidadAutonoma
+# http://dbpedia.org/ontology/GovernmentalAdministrativeRegion
+
+<http://data.euskadi.eus/id/public-sector/government/GovernmentalAdministrativeRegion/euskadi> schema:mainEntityOfPage <http://www.euskadi.eus> . 
+<http://data.euskadi.eus/id/public-sector/government/GovernmentalAdministrativeRegion/euskadi> owl:sameAs <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Pais-Vasco> .

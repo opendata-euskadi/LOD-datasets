@@ -1,8 +1,10 @@
 PREFIX schema: <http://schema.org/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 # http://opendata.aragon.es/def/Aragopedia#ComunidadAutonoma
 # http://dbpedia.org/ontology/GovernmentalAdministrativeRegion
 
 <http://data.euskadi.eus/id/public-sector/government/GovernmentalAdministrativeRegion/euskadi> schema:mainEntityOfPage <http://www.euskadi.eus> . 
+<http://www.euskadi.eus> rdf:type schema:WebPage .
 <http://data.euskadi.eus/id/public-sector/government/GovernmentalAdministrativeRegion/euskadi> owl:sameAs <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Pais-Vasco> .

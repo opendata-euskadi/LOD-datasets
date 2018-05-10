@@ -1,0 +1,15 @@
+PREFIX schema: <http://schema.org/> 
+PREFIX eli: <http://data.europa.eu/eli/ontology#> 
+PREFIX graph:<http://data.euskadi.eus/graph/>
+
+SELECT  DISTINCT ?datePub ?legeguneaurl ?title
+WHERE {
+	GRAPH graph:bopv-european-legislation-identifier-eli {
+		?legalresource eli:date_publication ?datePub .
+		?legalresource eli:is_realized_by ?legalexpresion .
+    	?legalexpresion eli:title ?title .
+		?eliformat eli:embodies ?legalexpresion .
+		?eliformat schema:mainEntityOfPage ?legeguneaurl .
+	}
+}
+ORDER BY ASC (?datePub)

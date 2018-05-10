@@ -1,0 +1,13 @@
+PREFIX graph:<http://data.euskadi.eus/graph/>
+PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+
+SELECT DISTINCT ?loddistribution ?otherdistribution 
+WHERE {
+  ?maindistribution dcat:distribution  ?loddistribution .
+  ?maindistribution dcat:distribution ?otherdistribution .
+  ?loddistribution sd:namedGraph graph:bopv-european-legislation-identifier-eli .
+  GRAPH graph:bopv-european-legislation-identifier-eli  {
+    	?sub ?pred ?obj 
+  	}
+}  

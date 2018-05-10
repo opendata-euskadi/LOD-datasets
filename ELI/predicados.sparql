@@ -1,0 +1,10 @@
+PREFIX graph:<http://data.euskadi.eus/graph/>
+PREFIX sd: <http://www.w3.org/ns/sparql-service-description#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+
+SELECT ?pred
+WHERE {
+  GRAPH graph:bopv-european-legislation-identifier-eli  {
+    	?sub ?pred ?obj 
+  	}
+} 
